@@ -1,0 +1,18 @@
+{
+  "name": "sotokudus-kedaitaman-website",
+  "version": "1.0.0",
+  "description": "Website Resmi dan Portal Admin Soto Kudus Kedai Taman Surabaya",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "soto-kudus",
+    "kedai-taman",
+    "kuliner-surabaya",
+    "admin-dashboard"
+  ],
+  "author": "Kedai Taman Surabaya",
+  "license": "ISC"
+}

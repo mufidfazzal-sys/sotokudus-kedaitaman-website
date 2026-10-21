@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Pengelola Admin - Soto Kudus Kedai Taman</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="images/branding/logo.jpg">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-green-dark: #0f3d1f;
+      --color-green-primary: #15803d;
+      --color-green-leaf: #16a34a;
+      --color-green-light: #22c55e;
+      --color-green-soft: #f0fdf4;
+      --color-green-mint: #dcfce7;
+      --color-gold: #d97706;
+      --color-gold-light: #f59e0b;
+      --color-gold-soft: #fef3c7;
+      --color-bg-page: #f4f6f4;
+      --color-surface: #ffffff;
+      --color-text-main: #14281d;
+      --color-text-muted: #4b6354;
+      --color-text-light: #64748b;
+      --color-border: #e2e8e3;
+      --color-danger: #dc2626;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-script: 'Caveat', cursive, sans-serif;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 2px 8px rgba(15, 61, 31, 0.05);
+      --shadow-md: 0 8px 24px rgba(15, 61, 31, 0.08);
+      --shadow-lg: 0 16px 40px rgba(15, 61, 31, 0.12);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--color-bg-page);
+      color: var(--color-text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Admin Navigation Bar */
+    .admin-navbar {
+      background: linear-gradient(135deg, var(--color-green-dark) 0%, var(--color-green-primary) 100%);
+      color: #ffffff;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 16px rgba(15, 61, 31, 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .admin-nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #ffffff;
+    }
+    .admin-nav-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid var(--color-gold-light);
+      object-fit: cover;
+      background: #ffffff;
+    }
+    .admin-nav-title {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .admin-nav-badge {
+      background: var(--color-gold);
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+    .admin-nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .btn-nav-action {
+      background: rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      padding: 7px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .btn-nav-action:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateY(-1px);
+    }
+
+    /* Main Container */
+    .admin-layout {
+      max-width: 1280px;
+      width: 95%;
+      margin: 24px auto 40px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    /* Admin Tabs Header */
+    .admin-tabs-bar {
+      display: flex;
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      padding: 6px;
+      gap: 6px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border);
+      overflow-x: auto;
+      margin-bottom: 24px;
+    }
+    .admin-tab-btn {
+      padding: 10px 18px;
+      border: none;
+      background: transparent;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .admin-tab-btn:hover {
+      background: var(--color-green-soft);
+      color: var(--color-green-primary);
+    }
+    .admin-tab-btn.active {
+      background: var(--color-green-primary);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(21, 128, 61, 0.25);
+    }
+
+    /* Tab Panes */
+    .admin-tab-pane {
+      display: none;
+      animation: fadeIn 0.25s ease-out;
+    }
+    .admin-tab-pane.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Card Panels */
+    .admin-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+    .admin-card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1.5px solid var(--color-green-soft);
+    }
+    .admin-card-title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      color: var(--color-green-dark);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .admin-card-subtitle {
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+      margin-top: 4px;
+    }
+
+    /* Form Elements */
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+    .form-label {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--color-green-dark);
+    }
+    .form-help {
+      font-size: 0.78rem;
+      color: var(--color-text-light);
+    }
+    .form-input, .form-textarea, .form-select {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      color: var(--color-text-main);
+      background: #ffffff;
+      transition: all 0.2s;
+    }
+    .form-input:focus, .form-textarea:focus, .form-select:focus {
+      outline: none;
+      border-color: var(--color-green-primary);
+      box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.12);
+    }
+    .form-textarea {
+      min-height: 90px;
+      resize: vertical;
+      line-height: 1.5;
+    }
+
+    /* Buttons */
+    .btn-admin {
+      padding: 10px 20px;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: var(--color-green-primary);
+      color: #ffffff;
+    }
+    .btn-primary:hover {
+      background: var(--color-green-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(21, 128, 61, 0.2);
+    }
+    .btn-secondary {
+      background: #e2e8f0;
+      color: #334155;
+    }
+    .btn-secondary:hover {
+      background: #cbd5e1;
+    }
+    .btn-gold {
+      background: var(--color-gold);
+      color: #ffffff;
+    }
+    .btn-gold:hover {
+      background: #b45309;
+      transform: translateY(-1px);
+    }
+    .btn-danger {
+      background: #fee2e2;
+      color: var(--color-danger);
+      border: 1px solid #fecaca;
+    }
+    .btn-danger:hover {
+      background: var(--color-danger);
+      color: #ffffff;
+    }
+
+    /* Stats Ribbon */
+    .stats-ribbon {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .stat-box {
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      padding: 18px 22px;
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .stat-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--color-green-soft);
+      color: var(--color-green-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+    .stat-info h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--color-text-light);
+    }
+    .stat-info .stat-number {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--color-green-dark);
+      font-family: var(--font-serif);
+    }
+
+    /* Menu & Gallery Table */
+    .admin-table-wrap {
+      overflow-x: auto;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--color-border);
+    }
+    .admin-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+    .admin-table th {
+      background: #f8fafc;
+      padding: 12px 16px;
+      font-weight: 700;
+      color: var(--color-text-muted);
+      border-bottom: 1.5px solid var(--color-border);
+      white-space: nowrap;
+    }
+    .admin-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--color-border);
+      vertical-align: middle;
+    }
+    .admin-table tr:hover td {
+      background: var(--color-green-soft);
+    }
+    .table-thumb {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
+      background: #f1f5f9;
+      border: 1px solid var(--color-border);
+    }
+    .badge-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+    .badge-status.available {
+      background: #dcfce7;
+      color: #15803d;
+      border: 1px solid #bbf7d0;
+    }
+    .badge-status.out-of-stock {
+      background: #fee2e2;
+      color: #dc2626;
+      border: 1px solid #fecaca;
+    }
+
+    /* Switch toggle */
+    .switch-label {
+      position: relative;
+      display: inline-block;
+      width: 48px;
+      height: 26px;
+    }
+    .switch-label input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .switch-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #cbd5e1;
+      transition: .3s;
+      border-radius: 34px;
+    }
+    .switch-slider:before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .3s;
+      border-radius: 50%;
+    }
+    input:checked + .switch-slider {
+      background-color: var(--color-green-primary);
+    }
+    input:checked + .switch-slider:before {
+      transform: translateX(22px);
+    }
+
+    /* Image Preview Box */
+    .img-preview-box {
+      width: 140px;
+      height: 100px;
+      border-radius: var(--radius-sm);
+      border: 2px dashed var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: #f8fafc;
+      margin-top: 8px;
+    }
+    .img-preview-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Login Modal Overlay */
+    .login-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(15, 61, 31, 0.75);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    .login-card {
+      background: #ffffff;
+      max-width: 420px;
+      width: 90%;
+      border-radius: var(--radius-lg);
+      padding: 36px 30px;
+      box-shadow: var(--shadow-lg);
+      text-align: center;
+      border: 2px solid var(--color-green-leaf);
+    }
+    .login-logo {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      border: 3px solid var(--color-gold);
+      margin: 0 auto 16px;
+      object-fit: cover;
+    }
+    .login-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: var(--color-green-dark);
+      margin-bottom: 6px;
+    }
+    .login-desc {
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+      margin-bottom: 24px;
+    }
+
+    /* Modal Form (Add/Edit) */
+    .admin-modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 20px;
+    }
+    .admin-modal-overlay.active {
+      display: flex;
+    }
+    .admin-modal-card {
+      background: #ffffff;
+      max-width: 620px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      flex-direction: column;
+    }
+    .admin-modal-head {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--color-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .admin-modal-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .admin-modal-foot {
+      padding: 16px 24px;
+      border-top: 1px solid var(--color-border);
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      background: #f8fafc;
+    }
+
+    /* Toast Notification */
+    .admin-toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--color-green-dark);
+      color: #ffffff;
+      padding: 14px 24px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 0.92rem;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s;
+      z-index: 10000;
+      border-left: 4px solid var(--color-gold);
+    }
+    .admin-toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .admin-navbar {
+        padding: 12px 16px;
+      }
+      .admin-layout {
+        width: 100%;
+        margin-top: 12px;
+        padding: 0 12px;
+      }
+      .admin-card {
+        padding: 20px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= LOGIN SCREEN OVERLAY ================= -->
+  <div class="login-overlay" id="loginScreen">
+    <div class="login-card">
+      <img src="images/branding/logo.jpg" alt="Logo Soto Kudus Kedai Taman" class="login-logo">
+      <h2 class="login-title">Portal Pengelola Admin</h2>
+      <p class="login-desc">Soto Kudus Kedai Taman (SODUS) Surabaya</p>
+
+      <form id="loginForm">
+        <div class="form-group" style="text-align: left; margin-bottom: 14px;">
+          <label class="form-label">Username</label>
+          <input type="text" id="loginUser" class="form-input" placeholder="admin" value="admin" required />
+        </div>
+        <div class="form-group" style="text-align: left; margin-bottom: 20px;">
+          <label class="form-label">Password</label>
+          <input type="password" id="loginPass" class="form-input" placeholder="Masukkan password..." required />
+          <span style="font-size: 0.78rem; color: var(--color-text-light); margin-top: 4px;">Default bawaan: <code>sodus123</code></span>
+        </div>
+        <button type="submit" class="btn-admin btn-primary" style="width: 100%; justify-content: center;">
+          Masuk ke Dashboard 🔐
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= TOP ADMIN NAVBAR ================= -->
+  <header class="admin-navbar">
+    <a href="#" class="admin-nav-brand">
+      <img src="images/branding/logo.jpg" alt="Logo" class="admin-nav-logo" id="topNavLogo">
+      <div>
+        <div class="admin-nav-title">SODUS KEDAI TAMAN <span class="admin-nav-badge">ADMIN</span></div>
+        <div style="font-size: 0.78rem; opacity: 0.85;">Panel Pengelola Konten & Menu</div>
+      </div>
+    </a>
+
+    <div class="admin-nav-actions">
+      <a href="index.html" target="_blank" class="btn-nav-action" title="Lihat Tampilan Website">
+        🌐 Buka Website
+      </a>
+      <button class="btn-nav-action" id="btnLogout" title="Keluar dari Admin">
+        🚪 Keluar
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= MAIN ADMIN DASHBOARD ================= -->
+  <main class="admin-layout" id="adminDashboard" style="display: none;">
+
+    <!-- Stats Ribbon -->
+    <div class="stats-ribbon">
+      <div class="stat-box">
+        <div class="stat-icon">🥣</div>
+        <div class="stat-info">
+          <h4>Total Menu</h4>
+          <div class="stat-number" id="statTotalMenu">18</div>
+        </div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-icon" style="color: #16a34a; background: #dcfce7;">✓</div>
+        <div class="stat-info">
+          <h4>Menu Tersedia</h4>
+          <div class="stat-number" id="statAvailableMenu">18</div>
+        </div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-icon" style="color: #d97706; background: #fef3c7;">📸</div>
+        <div class="stat-info">
+          <h4>Foto Galeri</h4>
+          <div class="stat-number" id="statTotalGallery">6</div>
+        </div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-icon" style="color: #7c3aed; background: #ede9fe;">🎁</div>
+        <div class="stat-info">
+          <h4>Status Promo</h4>
+          <div class="stat-number" id="statPromoStatus" style="font-size: 1.25rem;">AKTIF</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs Navigation Bar -->
+    <nav class="admin-tabs-bar">
+      <button class="admin-tab-btn active" data-tab="tab-menu">
+        🥣 Kelola Menu
+      </button>
+      <button class="admin-tab-btn" data-tab="tab-cover">
+        🖼️ Edit Cover (Hero)
+      </button>
+      <button class="admin-tab-btn" data-tab="tab-gallery">
+        📸 Kelola Galeri
+      </button>
+      <button class="admin-tab-btn" data-tab="tab-location">
+        📍 Alamat & Lokasi
+      </button>
+      <button class="admin-tab-btn" data-tab="tab-contact">
+        📱 Kontak & Medsos
+      </button>
+      <button class="admin-tab-btn" data-tab="tab-promo">
+        🎁 Promo & Voucher
+      </button>
+      <button class="admin-tab-btn" data-tab="tab-account">
+        ⚙️ Akun & Cadangan
+      </button>
+    </nav>
+
+    <!-- ================= TAB 1: KELOLA MENU ================= -->
+    <section class="admin-tab-pane active" id="tab-menu">
+      <div class="admin-card">
+        <div class="admin-card-head">
+          <div>
+            <h3 class="admin-card-title">🥣 Daftar Menu Hidangan</h3>
+            <p class="admin-card-subtitle">Kelola harga, foto, ketersediaan menu (Tersedia / Habis), serta tambahkan menu baru.</p>
+          </div>
+          <div style="display: flex; gap: 10px; align-items: center;">
+            <input type="text" id="adminMenuSearch" class="form-input" placeholder="Cari menu..." style="width: 220px;" />
+            <button class="btn-admin btn-primary" id="btnOpenAddMenu">
+              + Tambah Menu Baru
+            </button>
+          </div>
+        </div>
+
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th style="width: 70px;">Foto</th>
+                <th>Nama Menu & Deskripsi</th>
+                <th>Kategori</th>
+                <th>Harga (Rp)</th>
+                <th>Tag Label</th>
+                <th>Ketersediaan</th>
+                <th style="text-align: right;">Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="adminMenuTableBody">
+              <!-- Populated by admin.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TAB 2: EDIT COVER (HERO SECTION) ================= -->
+    <section class="admin-tab-pane" id="tab-cover">
+      <div class="admin-card">
+        <div class="admin-card-head">
+          <div>
+            <h3 class="admin-card-title">🖼️ Edit Cover Depan (Hero Section)</h3>
+            <p class="admin-card-subtitle">Ubah teks headline, badge promosi, tagline penjelasan, 3 kartu keunggulan, dan stiker melayang.</p>
+          </div>
+          <button class="btn-admin btn-primary" id="btnSaveHero">
+            💾 Simpan Perubahan Cover
+          </button>
+        </div>
+
+        <form id="heroForm" class="form-grid">
+          <div class="form-group full-width">
+            <label class="form-label">Logo Branding Kedai Taman</label>
+            <div style="display: flex; gap: 14px; align-items: center;">
+              <input type="text" id="heroLogoInput" class="form-input" placeholder="images/branding/logo.jpg atau URL..." />
+              <input type="file" id="heroLogoFile" accept="image/*" style="display: none;" />
+              <button type="button" class="btn-admin btn-secondary" onclick="document.getElementById('heroLogoFile').click()">
+                Unggah File
+              </button>
+            </div>
+            <div class="img-preview-box">
+              <img id="heroLogoPreview" src="images/branding/logo.jpg" alt="Preview Logo" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Badge 1 (Hijau)</label>
+            <input type="text" id="heroBadge1Input" class="form-input" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Badge 2 (Emas)</label>
+            <input type="text" id="heroBadge2Input" class="form-input" />
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">Script Tag Khas (Tulisan Indah)</label>
+            <input type="text" id="heroScriptTagInput" class="form-input" />
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">Headline / Judul Utama</label>
+            <input type="text" id="heroHeadlineInput" class="form-input" />
+            <span class="form-help">Tip: Gunakan teks rapi untuk memikat selera pengunjung sarapan & makan malam.</span>
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">Deskripsi Tagline Utama</label>
+            <textarea id="heroDescInput" class="form-textarea"></textarea>
+          </div>
+
+          <!-- 3 Highlights Cards -->
+          <div class="form-group full-width">
+            <h4 style="font-family: var(--font-serif); color: var(--color-green-dark); margin: 12px 0 6px;">3 Kartu Keunggulan Khas</h4>
+          </div>
+
+          <!-- Highlight 1 -->
+          <div class="form-group">
+            <label class="form-label">Keunggulan 1 (Ikon & Judul)</label>
+            <div style="display: flex; gap: 8px;">
+              <input type="text" id="hl1Icon" class="form-input" style="width: 60px; text-align: center;" />
+              <input type="text" id="hl1Title" class="form-input" />
+            </div>
+            <input type="text" id="hl1Desc" class="form-input" placeholder="Keterangan..." style="margin-top: 6px;" />
+          </div>
+
+          <!-- Highlight 2 -->
+          <div class="form-group">
+            <label class="form-label">Keunggulan 2 (Ikon & Judul)</label>
+            <div style="display: flex; gap: 8px;">
+              <input type="text" id="hl2Icon" class="form-input" style="width: 60px; text-align: center;" />
+              <input type="text" id="hl2Title" class="form-input" />
+            </div>
+            <input type="text" id="hl2Desc" class="form-input" placeholder="Keterangan..." style="margin-top: 6px;" />
+          </div>
+
+          <!-- Highlight 3 -->
+          <div class="form-group">
+            <label class="form-label">Keunggulan 3 (Ikon & Judul)</label>
+            <div style="display: flex; gap: 8px;">
+              <input type="text" id="hl3Icon" class="form-input" style="width: 60px; text-align: center;" />
+              <input type="text" id="hl3Title" class="form-input" />
+            </div>
+            <input type="text" id="hl3Desc" class="form-input" placeholder="Keterangan..." style="margin-top: 6px;" />
+          </div>
+
+          <!-- Floating Pills -->
+          <div class="form-group full-width">
+            <h4 style="font-family: var(--font-serif); color: var(--color-green-dark); margin: 12px 0 6px;">Stiker Melayang (Pills)</h4>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Stiker Melayang 1</label>
+            <input type="text" id="heroPill1Input" class="form-input" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Stiker Melayang 2</label>
+            <input type="text" id="heroPill2Input" class="form-input" />
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= TAB 3: KELOLA GALERI ================= -->
+    <section class="admin-tab-pane" id="tab-gallery">
+      <div class="admin-card">
+        <div class="admin-card-head">
+          <div>
+            <h3 class="admin-card-title">📸 Galeri Suasana & Hidangan</h3>
+            <p class="admin-card-subtitle">Kelola foto-foto mangkuk soto kudus, lauk pendamping, serta suasana asri taman yang tampil di website.</p>
+          </div>
+          <button class="btn-admin btn-primary" id="btnOpenAddGallery">
+            + Tambah Foto Galeri
+          </button>
+        </div>
+
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th style="width: 80px;">Foto</th>
+                <th>Judul Foto</th>
+                <th>Kategori / Badge</th>
+                <th>Deskripsi</th>
+                <th style="text-align: right;">Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="adminGalleryTableBody">
+              <!-- Populated by admin.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TAB 4: ALAMAT & LOKASI ================= -->
+    <section class="admin-tab-pane" id="tab-location">
+      <div class="admin-card">
+        <div class="admin-card-head">
+          <div>
+            <h3 class="admin-card-title">📍 Alamat Cabang & Jam Operasional</h3>
+            <p class="admin-card-subtitle">Pengaturan alamat, fasilitas, peta Google Maps, dan jam operasional dinamis.</p>
+          </div>
+          <button class="btn-admin btn-primary" id="btnSaveLocation">
+            💾 Simpan Perubahan Lokasi
+          </button>
+        </div>
+
+        <form id="locationForm" class="form-grid">
+          <div class="form-group full-width">
+            <label class="form-label">Nama Cabang / Identitas</label>
+            <input type="text" id="locBranchName" class="form-input" />
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">Alamat Lengkap</label>
+            <textarea id="locAddress" class="form-textarea"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Jam Buka (Angka 0-24 WIB)</label>
+            <input type="number" id="locHourStart" class="form-input" min="0" max="23" />
+            <span class="form-help">Default: 6 (Pukul 06.00 WIB)</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Jam Tutup (Angka 0-24 WIB)</label>
+            <input type="number" id="locHourEnd" class="form-input" min="0" max="24" />
+            <span class="form-help">Default: 22 (Pukul 22.00 WIB)</span>
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">Teks Tampilan Jam Operasional</label>
+            <input type="text" id="locHoursText" class="form-input" />
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">Fasilitas Cabang</label>
+            <textarea id="locFacilities" class="form-textarea"></textarea>
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">Metode Pembayaran Diterima</label>
+            <input type="text" id="locPayments" class="form-input" />
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">Link Rute Google Maps (Tombol Navigasi)</label>
+            <input type="text" id="locMapsUrl" class="form-input" />
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">Kode Embed Iframe Peta Google Maps</label>
+            <input type="text" id="locMapsEmbed" class="form-input" />
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= TAB 5: KONTAK & MEDSOS ================= -->
+    <section class="admin-tab-pane" id="tab-contact">
+      <div class="admin-card">
+        <div class="admin-card-head">
+          <div>
+            <h3 class="admin-card-title">📱 Kontak, Medsos & Pesan Online</h3>
+            <p class="admin-card-subtitle">Pengaturan nomor WhatsApp hotline, telepon, akun Instagram, dan tautan aplikasi delivery online.</p>
+          </div>
+          <button class="btn-admin btn-primary" id="btnSaveContact">
+            💾 Simpan Perubahan Kontak
+          </button>
+        </div>
+
+        <form id="contactForm" class="form-grid">
+          <div class="form-group full-width">
+            <label class="form-label">Teks Pengumuman Paling Atas (Running Bar)</label>
+            <input type="text" id="contactAnnouncement" class="form-input" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">WhatsApp Hotline (Format Internasional)</label>
+            <input type="text" id="contactWa" class="form-input" placeholder="6285158515332" />
+            <span class="form-help">Digunakan untuk direct chat & order WhatsApp (tanpa tanda + atau 0 di depan).</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">WhatsApp Tampilan Teks</label>
+            <input type="text" id="contactWaDisplay" class="form-input" placeholder="0851-5851-5332" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Nomor Telepon Outlet Kedai</label>
+            <input type="text" id="contactPhone" class="form-input" placeholder="(031) 8298832" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Username Akun Instagram</label>
+            <input type="text" id="contactIg" class="form-input" placeholder="sotokudus_kedaitaman" />
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">URL Profil Instagram</label>
+            <input type="text" id="contactIgUrl" class="form-input" placeholder="https://www.instagram.com/sotokudus_kedaitaman/?hl=en" />
+          </div>
+
+          <!-- Delivery Links -->
+          <div class="form-group full-width">
+            <h4 style="font-family: var(--font-serif); color: var(--color-green-dark); margin: 12px 0 6px;">Tautan Online Delivery Partners</h4>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Link GoFood</label>
+            <input type="text" id="contactGofood" class="form-input" placeholder="https://gofood.link/..." />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Link GrabFood</label>
+            <input type="text" id="contactGrabfood" class="form-input" placeholder="https://food.grab.com/..." />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Link ShopeeFood</label>
+            <input type="text" id="contactShopeefood" class="form-input" placeholder="https://shopee.co.id/shopeefood/..." />
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= TAB 6: PROMO SPESIAL & VOUCHER ================= -->
+    <section class="admin-tab-pane" id="tab-promo">
+      <div class="admin-card">
+        <div class="admin-card-head">
+          <div>
+            <h3 class="admin-card-title">🎁 Pengaturan Promo & Voucher Diskon</h3>
+            <p class="admin-card-subtitle">Atur kupon voucher, persentase diskon belanja, auto pop-up banner, dan pita promo atas.</p>
+          </div>
+          <button class="btn-admin btn-primary" id="btnSavePromo">
+            💾 Simpan Pengaturan Promo
+          </button>
+        </div>
+
+        <form id="promoForm" class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Status Fitur Promo</label>
+            <div style="display: flex; align-items: center; gap: 12px; margin-top: 6px;">
+              <label class="switch-label">
+                <input type="checkbox" id="promoEnabledCheck" />
+                <span class="switch-slider"></span>
+              </label>
+              <span id="promoEnabledText" style="font-weight: 700; color: var(--color-green-primary);">Aktif</span>
+            </div>
+            <span class="form-help">Jika dinonaktifkan, banner strip dan floating button tidak akan tampil.</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Auto Pop-Up Modal Saat Pengunjung Masuk</label>
+            <div style="display: flex; align-items: center; gap: 12px; margin-top: 6px;">
+              <label class="switch-label">
+                <input type="checkbox" id="promoAutoPopupCheck" />
+                <span class="switch-slider"></span>
+              </label>
+              <span id="promoAutoPopupText" style="font-weight: 700; color: var(--color-green-primary);">Aktif</span>
+            </div>
+            <span class="form-help">Modal promo otomatis muncul 1x per sesi kunjungan.</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Kode Kupon / Voucher (Huruf Besar)</label>
+            <input type="text" id="promoCodeInput" class="form-input" placeholder="Cth: SODUS15" style="text-transform: uppercase; font-weight: 800; letter-spacing: 1px;" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Badge Diskon (Teks Singkat)</label>
+            <input type="text" id="promoBadgeInput" class="form-input" placeholder="Cth: DISKON 15%" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Persentase Potongan (%)</label>
+            <input type="number" id="promoPercentInput" class="form-input" min="1" max="100" placeholder="15" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Maksimal Potongan Diskon (Rp)</label>
+            <input type="number" id="promoMaxDiscountInput" class="form-input" placeholder="20000" />
+            <span class="form-help">Batas maksimal potongan rupiah (cth: 20000).</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Minimal Belanja (Rp)</label>
+            <input type="number" id="promoMinOrderInput" class="form-input" placeholder="40000" />
+            <span class="form-help">Syarat minimal subtotal pesanan agar voucher berlaku.</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Masa Berlaku Voucher</label>
+            <input type="text" id="promoValidUntilInput" class="form-input" placeholder="Cth: 31 Desember 2026" />
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">Judul Promo (Popup Modal)</label>
+            <input type="text" id="promoTitleInput" class="form-input" />
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">Deskripsi Promo</label>
+            <textarea id="promoDescInput" class="form-textarea"></textarea>
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">Teks Pita Promo Bergerak (Top Strip)</label>
+            <input type="text" id="promoBannerTextInput" class="form-input" />
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">Foto Banner Modal Pop-up</label>
+            <div style="display: flex; gap: 14px; align-items: center;">
+              <input type="text" id="promoImageInput" class="form-input" placeholder="images/menu/... atau URL" />
+              <input type="file" id="promoImageFile" accept="image/*" style="display: none;" />
+              <button type="button" class="btn-admin btn-secondary" onclick="document.getElementById('promoImageFile').click()">
+                Unggah File
+              </button>
+            </div>
+            <div class="img-preview-box" style="width: 180px; height: 110px;">
+              <img id="promoImagePreview" src="images/menu/soto-kudus-campur.jpg" alt="Preview Promo" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= TAB 7: AKUN & CADANGAN ================= -->
+    <section class="admin-tab-pane" id="tab-account">
+      <div class="admin-card">
+        <div class="admin-card-head">
+          <div>
+            <h3 class="admin-card-title">🔐 Keamanan Akun Admin</h3>
+            <p class="admin-card-subtitle">Perbarui password akses panel pengelola untuk keamanan data warung.</p>
+          </div>
+        </div>
+
+        <form id="passwordForm" style="max-width: 440px;">
+          <div class="form-group" style="margin-bottom: 14px;">
+            <label class="form-label">Password Baru</label>
+            <input type="password" id="newPassword" class="form-input" placeholder="Minimal 6 karakter..." required />
+          </div>
+          <div class="form-group" style="margin-bottom: 20px;">
+            <label class="form-label">Konfirmasi Password Baru</label>
+            <input type="password" id="confirmPassword" class="form-input" placeholder="Ulangi password baru..." required />
+          </div>
+          <button type="submit" class="btn-admin btn-primary">
+            Perbarui Password 🔐
+          </button>
+        </form>
+      </div>
+
+      <div class="admin-card">
+        <div class="admin-card-head">
+          <div>
+            <h3 class="admin-card-title">💾 Cadangan Data (Backup & Restore)</h3>
+            <p class="admin-card-subtitle">Unduh salinan data website ke file JSON cadangan atau pulihkan data kapan saja.</p>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center;">
+          <button class="btn-admin btn-gold" id="btnExportBackup">
+            📥 Unduh Cadangan Data JSON
+          </button>
+
+          <input type="file" id="importBackupFile" accept=".json" style="display: none;" />
+          <button class="btn-admin btn-secondary" onclick="document.getElementById('importBackupFile').click()">
+            📤 Pulihkan Data dari File JSON
+          </button>
+
+          <button class="btn-admin btn-danger" id="btnResetFactory">
+            ⚠️ Reset ke Setelan Pabrik
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= MODAL: TAMBAH / EDIT MENU ================= -->
+  <div class="admin-modal-overlay" id="menuModal">
+    <div class="admin-modal-card">
+      <div class="admin-modal-head">
+        <h3 id="menuModalTitle" style="font-family: var(--font-serif); color: var(--color-green-dark);">Tambah Menu Baru</h3>
+        <button type="button" class="btn-admin btn-secondary" onclick="closeMenuModal()">&times;</button>
+      </div>
+      <form id="menuForm">
+        <div class="admin-modal-body">
+          <input type="hidden" id="menuEditId" />
+
+          <div class="form-group">
+            <label class="form-label">Nama Menu</label>
+            <input type="text" id="menuNameInput" class="form-input" placeholder="Cth: Soto Kudus Daging Sapi" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Kategori</label>
+            <select id="menuCategoryInput" class="form-select">
+              <option value="soto">Soto Kudus (SODUS)</option>
+              <option value="lauk">Sate & Lauk Pendamping</option>
+              <option value="nusantara">Masakan Nusantara</option>
+              <option value="minuman">Minuman & Jamu</option>
+              <option value="katering">Paket Katering & Tumpeng</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Harga (Rp)</label>
+            <input type="number" id="menuPriceInput" class="form-input" placeholder="Cth: 20000" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Ketersediaan Stok</label>
+            <div style="display: flex; align-items: center; gap: 10px; margin-top: 4px;">
+              <label class="switch-label">
+                <input type="checkbox" id="menuAvailableCheck" checked />
+                <span class="switch-slider"></span>
+              </label>
+              <span id="menuAvailableText" style="font-weight: 700; color: var(--color-green-primary);">Tersedia</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Tag / Label (Opsional)</label>
+            <input type="text" id="menuTagInput" class="form-input" placeholder="Cth: Best Seller ⭐ atau Wajib Coba 🍢" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Deskripsi Menu</label>
+            <textarea id="menuDescInput" class="form-textarea" placeholder="Tuliskan racikan bumbu, kelezatan, dan penyajiannya..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Foto Menu</label>
+            <div style="display: flex; gap: 10px;">
+              <input type="text" id="menuImageInput" class="form-input" placeholder="images/menu/... atau URL" />
+              <input type="file" id="menuImageFile" accept="image/*" style="display: none;" />
+              <button type="button" class="btn-admin btn-secondary" onclick="document.getElementById('menuImageFile').click()">
+                Unggah
+              </button>
+            </div>
+            <div class="img-preview-box">
+              <img id="menuImagePreview" src="images/menu/soto-kudus-campur.jpg" alt="Preview Menu" />
+            </div>
+          </div>
+        </div>
+        <div class="admin-modal-foot">
+          <button type="button" class="btn-admin btn-secondary" onclick="closeMenuModal()">Batal</button>
+          <button type="submit" class="btn-admin btn-primary">Simpan Menu</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: TAMBAH / EDIT GALERI ================= -->
+  <div class="admin-modal-overlay" id="galleryModal">
+    <div class="admin-modal-card">
+      <div class="admin-modal-head">
+        <h3 id="galleryModalTitle" style="font-family: var(--font-serif); color: var(--color-green-dark);">Tambah Foto Galeri</h3>
+        <button type="button" class="btn-admin btn-secondary" onclick="closeGalleryModal()">&times;</button>
+      </div>
+      <form id="galleryForm">
+        <div class="admin-modal-body">
+          <input type="hidden" id="galleryEditId" />
+
+          <div class="form-group">
+            <label class="form-label">Judul Foto</label>
+            <input type="text" id="galleryTitleInput" class="form-input" placeholder="Cth: Suasana Sarapan Pagi di Kedai Taman" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Kategori / Badge</label>
+            <input type="text" id="galleryBadgeInput" class="form-input" placeholder="Cth: Suasana Taman atau Menu Khas" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Keterangan / Deskripsi Foto</label>
+            <textarea id="galleryDescInput" class="form-textarea" placeholder="Tuliskan cerita foto..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">File Foto Galeri</label>
+            <div style="display: flex; gap: 10px;">
+              <input type="text" id="galleryImageInput" class="form-input" placeholder="images/galeri/... atau URL" required />
+              <input type="file" id="galleryImageFile" accept="image/*" style="display: none;" />
+              <button type="button" class="btn-admin btn-secondary" onclick="document.getElementById('galleryImageFile').click()">
+                Unggah
+              </button>
+            </div>
+            <div class="img-preview-box" style="width: 180px; height: 110px;">
+              <img id="galleryImagePreview" src="images/galeri/galeri-1-soto-kudus-hangat.jpg" alt="Preview Galeri" />
+            </div>
+          </div>
+        </div>
+        <div class="admin-modal-foot">
+          <button type="button" class="btn-admin btn-secondary" onclick="closeGalleryModal()">Batal</button>
+          <button type="submit" class="btn-admin btn-primary">Simpan Galeri</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notice -->
+  <div class="admin-toast" id="adminToast">
+    <span>🌿</span>
+    <span id="adminToastMsg">Perubahan berhasil disimpan!</span>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soto Kudus Kedai Taman (SODUS) - Surabaya | Cita Rasa Warisan Asli</title>
+  <meta name="description" content="Website Resmi Soto Kudus Kedai Taman (SODUS) Surabaya. Nikmati semangkuk soto kudus berkuah kaldu rempah gurih segar dengan ayam kampung, aneka sate bacem, tahu gimbal, dan suasana taman asri.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="images/branding/logo.jpg">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Soto Kudus Kedai Taman (SODUS) - Surabaya">
+  <meta property="og:description" content="Soto Kudus ayam kampung asli, sate puyuh bacem, dan aneka menu nusantara di suasana kedai taman yang asri. Buka 06.00 - 22.00 WIB.">
+  <meta property="og:image" content="images/branding/logo.jpg">
+  <meta property="og:type" content="restaurant">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ================= TOP ANNOUNCEMENT BAR ================= -->
+  <div class="announcement-bar" id="topAnnouncementBar">
+    <span class="badge-open">BUKA PAGI</span>
+    <span id="announcementText">🌿 Buka Setiap Hari 06.00 – 22.00 WIB • Jl. Gayungsari Timur No. 7, Menanggal, Surabaya</span>
+  </div>
+
+  <!-- ================= PROMO STRIP BANNER ================= -->
+  <div class="promo-strip-banner" id="promoStripBanner" style="display: none;">
+    <div class="promo-strip-content">
+      <span id="promoStripText">🎁 Promo Diskon 15% Menu Favorit dengan Kode: SODUS15</span>
+      <button class="promo-strip-btn" id="promoStripBtn">Klaim Diskon</button>
+    </div>
+  </div>
+
+  <!-- ================= STICKY NAVBAR ================= -->
+  <header class="main-header" id="mainHeader">
+    <div class="container nav-container">
+      <a href="#penjelasan" class="brand-link" title="Soto Kudus Kedai Taman">
+        <img src="images/branding/logo.jpg" alt="Logo Soto Kudus Kedai Taman" class="brand-logo-img" id="brandLogoImg">
+        <div class="brand-text-wrap">
+          <span class="brand-title" id="brandTitle">SOTO KUDUS</span>
+          <span class="brand-sub" id="brandSub">Kedai Taman</span>
+        </div>
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#penjelasan" class="nav-link active">Tentang Kami</a></li>
+          <li><a href="#menu" class="nav-link">Menu Khas</a></li>
+          <li><a href="#galeri" class="nav-link">Galeri</a></li>
+          <li><a href="#alamat" class="nav-link">Alamat & Kontak</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button class="cart-toggle-btn cart-toggle-trigger" title="Keranjang Pesanan" aria-label="Buka Keranjang Pesanan">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge-count">0</span>
+        </button>
+
+        <a href="#menu" class="btn-primary" style="padding: 9px 20px; font-size: 0.88rem; display: inline-flex;">
+          Pesan Menu
+        </a>
+
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Buka Menu Navigasi">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HALAMAN 1: PENJELASAN & TENTANG KEDAI TAMAN ================= -->
+    <section class="hero-section" id="penjelasan">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge-row">
+            <span class="badge-tag badge-green" id="heroBadge1">🌿 Suasana Kedai Taman Asri</span>
+            <span class="badge-tag badge-gold" id="heroBadge2">⭐ Resep Warisan Asli Kudus</span>
+          </div>
+
+          <span class="hero-script-tag" id="heroScriptTag">Selamat Datang di SODUS</span>
+          <h1 class="hero-title" id="heroTitle">
+            Kehangatan Soto Kudus Asli<br>
+            di Tengah <span>Sejuknya Taman</span>
+          </h1>
+
+          <p class="hero-desc" id="heroDesc">
+            <strong>Soto Kudus Kedai Taman (SODUS)</strong> menghadirkan kenikmatan soto kudus otentik dengan racikan kuah kaldu rempah gurih kekuningan, ayam kampung pilihan, dan taburan bawang putih goreng yang harum semerbak. Disajikan dalam mangkuk porselen khas dengan suasana santap hijau, asri, dan teduh di kawasan Gayungsari, Surabaya.
+          </p>
+
+          <!-- 3 Highlights Cards -->
+          <div class="hero-highlights" id="heroHighlights">
+            <div class="hero-highlight-card">
+              <span class="highlight-icon">🥣</span>
+              <span class="highlight-title">Mangkok Tradisional</span>
+              <span class="highlight-desc">Penyajian mangkok porselen khas penikmat soto sejati</span>
+            </div>
+            <div class="hero-highlight-card">
+              <span class="highlight-icon">🐓</span>
+              <span class="highlight-title">Ayam Kampung Segar</span>
+              <span class="highlight-desc">Daging empuk gurih dengan kaldu alami yang kaya rasa</span>
+            </div>
+            <div class="hero-highlight-card">
+              <span class="highlight-icon">🌅</span>
+              <span class="highlight-title">Buka Pagi Jam 06.00</span>
+              <span class="highlight-desc">Pilihan sarapan pagi hangat hingga santap malam santai</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#menu" class="btn-primary" id="heroCtaMenu">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+              Buka Daftar Menu
+            </a>
+            <button class="btn-secondary cart-toggle-trigger" id="heroCtaWa">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+              Pesan via WhatsApp
+            </button>
+            <a href="#alamat" class="btn-outline" id="heroCtaMaps">
+              📍 Petunjuk Lokasi
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual Side -->
+        <div class="hero-visual-card">
+          <div class="hero-logo-box">
+            <img src="images/branding/logo.jpg" alt="Logo Soto Kudus Kedai Taman" class="hero-logo-img" id="heroLogoImg">
+            <div class="hero-visual-caption">
+              <h3 id="heroCaptionTitle">SODUS Kedai Taman</h3>
+              <p id="heroCaptionSub">Kuliner Soto Kudus & Masakan Nusantara Sejak Pagi</p>
+            </div>
+          </div>
+          <div class="hero-floating-pill pill-1" id="heroPill1">
+            <span>🌿</span> 100% Halal & Segar
+          </div>
+          <div class="hero-floating-pill pill-2" id="heroPill2">
+            <span>🍢</span> Sate Puyuh Bacem Juara
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sub-Section: Penjelasan Filosofi & Konsep -->
+    <section class="about-section">
+      <div class="container about-grid">
+        <div class="about-images-wrapper">
+          <div class="about-img-box">
+            <img src="images/galeri/galeri-1-soto-kudus-hangat.jpg" alt="Soto Kudus Hangat" loading="lazy">
+          </div>
+          <div class="about-img-box">
+            <img src="images/galeri/galeri-3-suasana-kedai-taman.jpg" alt="Suasana Kedai Taman" loading="lazy">
+          </div>
+        </div>
+
+        <div class="about-content">
+          <span class="badge-tag badge-green" style="margin-bottom: 12px;">Cerita & Filosofi</span>
+          <h2>Kenapa Harus Mencicipi <span>Soto Kudus Kedai Taman?</span></h2>
+          <p>
+            Berasal dari kota kretek Kudus, Jawa Tengah, soto kudus memiliki kekhasan kuah kaldu rempah bening yang tidak menggunakan santan berat, melainkan perpaduan bawang putih goreng, kemiri, ketumbar, dan jahe yang menghasilkan rasa gurih ringan namun sangat kaya rempah.
+          </p>
+          <p>
+            Di <strong>Kedai Taman</strong>, kami merawat resep otentik ini dengan sentuhan suasana alam yang menenangkan. Pengunjung dapat menikmati hidangan hangat ditemani rindangnya pepohonan taman, semilir angin sepoi-sepoi, dan keramahan khas Nusantara.
+          </p>
+
+          <div class="philosophy-list">
+            <div class="philosophy-item">
+              <div class="philosophy-icon">🥣</div>
+              <div class="philosophy-text">
+                <h4>Tradisi Mangkok Kecil Berkuah Panas</h4>
+                <p>Ukuran mangkok porselen khas menjaga kuah soto tetap hangat dari suapan pertama hingga tetes kuah terakhir.</p>
+              </div>
+            </div>
+
+            <div class="philosophy-item">
+              <div class="philosophy-icon">🍢</div>
+              <div class="philosophy-text">
+                <h4>Aneka Lauk Baceman & Sate Pendamping</h4>
+                <p>Sate telur puyuh, sate ati ampela, sate usus bumbu kuning, perkedel kentang lembut, dan tempe bacem legit.</p>
+              </div>
+            </div>
+
+            <div class="philosophy-item">
+              <div class="philosophy-icon">🍃</div>
+              <div class="philosophy-text">
+                <h4>Ruang Makan Bersih, Asri & Ramah Keluarga</h4>
+                <p>Dilengkapi area makan indoor maupun semi-outdoor taman yang luas, cocok untuk kumpul keluarga dan relasi kantor.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HALAMAN 2: MENU LENGKAP ================= -->
+    <section class="section-common menu-section" id="menu">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-subtitle">Daftar Pilihan Hidangan</span>
+          <h2 class="section-title">Menu Lezat <span>Kedai Taman</span></h2>
+          <p class="section-desc">
+            Dari semangkuk Soto Kudus hangat, aneka sate bacem pendamping, menu Nusantara seperti Tahu Gimbal Semarang dan Nasi Sambal Ibu, hingga wedang rempah tradisional.
+          </p>
+        </div>
+
+        <!-- Controls: Search & Category Filter Pills -->
+        <div class="menu-controls">
+          <div class="menu-search-wrapper">
+            <span class="menu-search-icon">🔍</span>
+            <input type="text" id="menuSearchInput" class="menu-search-input" placeholder="Cari menu favorit (cth: Soto, Sate Puyuh, Tahu Gimbal, Es Jeruk)..." autocomplete="off" />
+          </div>
+
+          <div class="menu-category-tabs">
+            <button class="category-tab-btn active" data-category="all">
+              ⭐ Semua Menu
+            </button>
+            <button class="category-tab-btn" data-category="soto">
+              🥣 Soto Kudus (SODUS)
+            </button>
+            <button class="category-tab-btn" data-category="lauk">
+              🍢 Sate & Lauk Pendamping
+            </button>
+            <button class="category-tab-btn" data-category="nusantara">
+              🍛 Masakan Nusantara
+            </button>
+            <button class="category-tab-btn" data-category="minuman">
+              🥤 Minuman & Jamu
+            </button>
+            <button class="category-tab-btn" data-category="katering">
+              🍱 Paket Katering
+            </button>
+          </div>
+        </div>
+
+        <!-- Menu Cards Grid -->
+        <div class="menu-grid" id="menuGrid">
+          <!-- Populated by script.js -->
+        </div>
+
+        <!-- Notes -->
+        <div style="margin-top: 40px; text-align: center; font-size: 0.9rem; color: var(--color-text-muted);">
+          <p>* Semua hidangan dimasak segar setiap hari menggunakan bahan-bahan alami berkualitas 100% Halal.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HALAMAN 3: GALERI FOTO ================= -->
+    <section class="section-common gallery-section" id="galeri">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-subtitle">Dokumentasi Visual</span>
+          <h2 class="section-title">Galeri Suasana & <span>Hidangan</span></h2>
+          <p class="section-desc">
+            Intip kelezatan semangkuk soto kudus hangat, lauk baceman menggiurkan, dan ketenangan suasana taman asri di Kedai Taman Surabaya.
+          </p>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+          <div class="gallery-card" data-title="Soto Kudus Mangkuk Tradisional" data-desc="Kuah kaldu ayam kampung bening gurih kekuningan dengan taburan bawang putih goreng renyah dan perasan jeruk limau segar.">
+            <span class="gallery-badge">Menu Khas</span>
+            <img src="images/galeri/galeri-1-soto-kudus-hangat.jpg" alt="Soto Kudus Hangat" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Soto Kudus Ayam Kampung</h4>
+              <p>Kuah rempah bening gurih segar penghangat tubuh</p>
+            </div>
+          </div>
+
+          <div class="gallery-card" data-title="Deretan Sate Bacem & Lauk Pendamping" data-desc="Sate telur puyuh kecap, sate ati ampela, sate usus, dan perkedel kentang yang selalu siap menemani semangkuk soto Anda.">
+            <span class="gallery-badge">Lauk Pendamping</span>
+            <img src="images/galeri/galeri-2-sate-puyuh-lauk.jpg" alt="Sate Puyuh & Lauk" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Aneka Sate Bacem Gurih</h4>
+              <p>Pelengkap wajib penambah kenikmatan soto kudus</p>
+            </div>
+          </div>
+
+          <div class="gallery-card" data-title="Suasana Rindang Kedai Taman" data-desc="Tempat makan yang asri dengan pepohonan hijau, udara sejuk, dan suasana ramah keluarga di Gayungsari Surabaya.">
+            <span class="gallery-badge">Suasana Taman</span>
+            <img src="images/galeri/galeri-3-suasana-kedai-taman.jpg" alt="Suasana Kedai Taman" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Suasana Alam yang Sejuk</h4>
+              <p>Nyaman untuk sarapan pagi maupun makan malam santai</p>
+            </div>
+          </div>
+
+          <div class="gallery-card" data-title="Tahu Gimbal Khas Semarang" data-desc="Tahu goreng hangat dengan gimbal udang renyah, kubis segar, tauge, dan siraman bumbu kacang petis yang medok sedap.">
+            <span class="gallery-badge">Kuliner Pesisir</span>
+            <img src="images/galeri/galeri-4-tahu-gimbal-semarang.jpg" alt="Tahu Gimbal Semarang" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Tahu Gimbal Semarang</h4>
+              <p>Perpaduan petis udang dan bumbu kacang gurih mantap</p>
+            </div>
+          </div>
+
+          <div class="gallery-card" data-title="Penyajian Hangat & Higienis" data-desc="Setiap hidangan disajikan dengan standar kebersihan tinggi dan bumbu rempah racikan khas nusantara.">
+            <span class="gallery-badge">Otentik</span>
+            <img src="images/galeri/galeri-5-penyajian-khas.jpg" alt="Penyajian Otentik" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Cita Rasa Warisan Asli</h4>
+              <p>Disajikan hangat langsung dari kuali kaldu rempah</p>
+            </div>
+          </div>
+
+          <div class="gallery-card" data-title="Minuman Tradisional & Kopi" data-desc="Pilihan wedang uwuh hangat, jamu beras kencur, es jeruk peras alami, hingga es kopi susu gula aren.">
+            <span class="gallery-badge">Segar & Berkhasiat</span>
+            <img src="images/galeri/galeri-6-minuman-tradisional.jpg" alt="Minuman Tradisional" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Minuman Tradisional & Segar</h4>
+              <p>Pelepas dahaga dan penghangat badan sehabis bersantap</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 40px; text-align: center;">
+          <a href="https://www.instagram.com/sotokudus_kedaitaman/?hl=en" target="_blank" rel="noopener noreferrer" class="btn-outline">
+            📸 Ikuti Instagram @sotokudus_kedaitaman
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HALAMAN 4: ALAMAT, KONTAK & MEDSOS ================= -->
+    <section class="section-common location-section" id="alamat">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-subtitle">Lokasi & Informasi Lengkap</span>
+          <h2 class="section-title">Kunjungi & Hubungi <span>Kedai Taman</span></h2>
+          <p class="section-desc">
+            Berada di lokasi yang strategis di Surabaya Selatan, mudah dijangkau dari arah Masjid Nasional Al-Akbar, Graha Pena, maupun Tol Menanggal.
+          </p>
+        </div>
+
+        <div class="location-grid">
+          <!-- Information Card -->
+          <div class="location-info-card">
+            <div id="liveStatusBadge" class="location-badge-status status-open">
+              <span class="status-indicator-dot"></span> BUKA SEKARANG • 06.00 - 22.00 WIB
+            </div>
+
+            <h3 class="location-branch-name" id="locationBranchName">Soto Kudus Kedai Taman</h3>
+
+            <ul class="location-detail-list">
+              <li class="location-detail-item">
+                <div class="detail-icon-circle">📍</div>
+                <div class="detail-text">
+                  <h4>Alamat Lengkap</h4>
+                  <p id="locationAddressText">Jl. Gayungsari Timur No. 7, Menanggal, Kec. Gayungan, Kota Surabaya, Jawa Timur 60234 (Kawasan Masjid Agung Al-Akbar Surabaya)</p>
+                </div>
+              </li>
+
+              <li class="location-detail-item">
+                <div class="detail-icon-circle">⏰</div>
+                <div class="detail-text">
+                  <h4>Jam Operasional</h4>
+                  <p id="locationHoursText">Buka <strong>Setiap Hari</strong>: Pukul <strong>06.00 – 22.00 WIB</strong> (Pagi untuk sarapan hingga malam hari)</p>
+                </div>
+              </li>
+
+              <li class="location-detail-item">
+                <div class="detail-icon-circle">📞</div>
+                <div class="detail-text">
+                  <h4>Kontak Telepon & WhatsApp</h4>
+                  <p id="locationContactText">Telepon: <strong>(031) 8298832</strong><br>WhatsApp / Seluler: <strong>0851-5851-5332</strong></p>
+                </div>
+              </li>
+
+              <li class="location-detail-item">
+                <div class="detail-icon-circle">🍃</div>
+                <div class="detail-text">
+                  <h4>Fasilitas Kedai</h4>
+                  <p id="locationFacilitiesText">Area Parkir Luas, Suasana Taman Terbuka & Indoor, Musholla, Toilet Bersih, Meja Santai Keluarga, Pembayaran QRIS & Tunai.</p>
+                </div>
+              </li>
+            </ul>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+              <a href="https://maps.google.com/?q=Soto+Kudus+Kedai+Taman+Jl.+Gayungsari+Timur+No.+7+Surabaya" target="_blank" rel="noopener noreferrer" class="btn-primary" id="locationGmapsBtn">
+                📍 Buka Rute Google Maps
+              </a>
+              <a href="https://wa.me/6285158515332?text=Halo%20Soto%20Kudus%20Kedai%20Taman,%20saya%20mau%20tanya%20arah%20lokasi" target="_blank" rel="noopener noreferrer" class="btn-outline" id="locationWaBtn">
+                💬 Chat WA Kedai
+              </a>
+            </div>
+          </div>
+
+          <!-- Embedded Map -->
+          <div class="map-wrapper">
+            <div class="map-header">
+              <h4>Peta Lokasi Kedai Taman Surabaya</h4>
+              <span class="badge-tag badge-white" style="font-size: 0.75rem;">Gayungsari, Surabaya</span>
+            </div>
+            <iframe 
+              id="locationMapIframe"
+              class="map-iframe"
+              title="Peta Lokasi Soto Kudus Kedai Taman Jl Gayungsari Timur Surabaya"
+              src="https://maps.google.com/maps?q=Jl.+Gayungsari+Timur+No.+7,+Menanggal,+Surabaya&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Contact Channels 4 Cards -->
+        <div class="contact-cards-grid">
+          <div class="contact-channel-card channel-wa">
+            <div class="channel-icon">💬</div>
+            <h4>WhatsApp Pemesanan</h4>
+            <p>Pemesanan meja, nasi kotak, maupun delivery fast response.</p>
+            <a href="https://wa.me/6285158515332?text=Halo%20Soto%20Kudus%20Kedai%20Taman,%20saya%20ingin%20memesan" target="_blank" rel="noopener noreferrer" class="btn-primary" style="width: 100%;">
+              0851-5851-5332
+            </a>
+          </div>
+
+          <div class="contact-channel-card channel-phone">
+            <div class="channel-icon">📞</div>
+            <h4>Telepon Outlet</h4>
+            <p>Hubungi saluran telepon resmi untuk info langsung kedai.</p>
+            <a href="tel:0318298832" class="btn-outline" style="width: 100%;">
+              (031) 8298832
+            </a>
+          </div>
+
+          <div class="contact-channel-card channel-ig">
+            <div class="channel-icon">📸</div>
+            <h4>Instagram Resmi</h4>
+            <p>Ikuti update harian, video suasana taman, dan promo spesial.</p>
+            <a href="https://www.instagram.com/sotokudus_kedaitaman/?hl=en" target="_blank" rel="noopener noreferrer" class="btn-outline" style="width: 100%;">
+              @sotokudus_kedaitaman
+            </a>
+          </div>
+
+          <div class="contact-channel-card channel-catering">
+            <div class="channel-icon">🍱</div>
+            <h4>Layanan Katering</h4>
+            <p>Melayani pesanan nasi tumpeng, syukuran, dan acara kantor.</p>
+            <a href="https://wa.me/6285158515332?text=Halo%20Kedai%20Taman,%20saya%20mau%20tanya%20paket%20catering%20acara" target="_blank" rel="noopener noreferrer" class="btn-outline" style="width: 100%;">
+              Konsultasi Katering
+            </a>
+          </div>
+        </div>
+
+        <!-- Online Delivery Section -->
+        <div class="delivery-partners-wrap">
+          <h3 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--color-green-dark); margin-bottom: 8px;">
+            Pesan Praktis Melalui Aplikasi Online Delivery
+          </h3>
+          <p style="color: var(--color-text-muted); font-size: 0.95rem;">
+            Cari <strong>"Soto Kudus Kedai Taman - Gayungsari"</strong> pada aplikasi favorit Anda:
+          </p>
+
+          <div class="delivery-badges-row">
+            <a href="https://gofood.link" target="_blank" rel="noopener noreferrer" class="delivery-badge-btn badge-gofood">
+              <span>🛵 Pesan di GoFood</span>
+            </a>
+            <a href="https://food.grab.com" target="_blank" rel="noopener noreferrer" class="delivery-badge-btn badge-grabfood">
+              <span>🏍️ Pesan di GrabFood</span>
+            </a>
+            <a href="https://shopee.co.id/shopeefood" target="_blank" rel="noopener noreferrer" class="delivery-badge-btn badge-shopeefood">
+              <span>🥡 Pesan di ShopeeFood</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Feedback & Reservation Form Box -->
+        <div class="feedback-box">
+          <h3 style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-green-dark); text-align: center; margin-bottom: 6px;">
+            Reservasi Meja / Pesan Katering
+          </h3>
+          <p style="text-align: center; color: var(--color-text-muted); font-size: 0.92rem; margin-bottom: 24px;">
+            Silakan kirimkan permohonan reservasi tempat atau pertanyaan seputar katering acara Anda:
+          </p>
+
+          <form id="feedbackForm">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="feedbackName" style="font-weight: 700; font-size: 0.9rem;">Nama Lengkap</label>
+                <input type="text" id="feedbackName" name="name" class="form-input" placeholder="Cth: Ibu Ratna" required />
+              </div>
+              <div class="form-group">
+                <label for="feedbackPhone" style="font-weight: 700; font-size: 0.9rem;">Nomor WhatsApp / HP</label>
+                <input type="tel" id="feedbackPhone" name="phone" class="form-input" placeholder="0812-xxxx-xxxx" required />
+              </div>
+              <div class="form-group full-width">
+                <label for="feedbackType" style="font-weight: 700; font-size: 0.9rem;">Keperluan</label>
+                <select id="feedbackType" name="type" class="form-input" style="font-weight: 600;">
+                  <option value="Reservasi Meja Makan">Reservasi Meja Makan Keluarga / Rombongan</option>
+                  <option value="Pesanan Nasi Kotak / Tumpeng">Pemesanan Nasi Kotak / Tumpeng Acara</option>
+                  <option value="Kritik & Saran">Kritik & Saran Layanan Kedai</option>
+                </select>
+              </div>
+              <div class="form-group full-width">
+                <label for="feedbackMessage" style="font-weight: 700; font-size: 0.9rem;">Pesan / Rincian Acara & Tanggal</label>
+                <textarea id="feedbackMessage" name="message" class="form-textarea" placeholder="Tuliskan tanggal kedatangan, perkiraan jumlah orang, atau catatan khusus..." required></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%;">
+              Kirimkan Permohonan Sekarang 🌿
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= MAIN FOOTER ================= -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>SOTO KUDUS KEDAI TAMAN</h3>
+          <p>
+            Kehangatan kuah kaldu rempah ayam kampung warisan asli kota Kudus berpadu dengan keteduhan suasana kedai taman yang hijau dan asri di Surabaya Selatan.
+          </p>
+          <div style="margin-top: 14px;">
+            <span class="badge-tag badge-white" style="font-size: 0.8rem;">🌿 100% Halal & Tanpa Bahan Pengawet</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigasi Halaman</h4>
+          <ul class="footer-links">
+            <li><a href="#penjelasan">Halaman 1: Tentang & Filosofi</a></li>
+            <li><a href="#menu">Halaman 2: Daftar Menu Lengkap</a></li>
+            <li><a href="#galeri">Halaman 3: Galeri Hidangan & Suasana</a></li>
+            <li><a href="#alamat">Halaman 4: Alamat, Kontak & Medsos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kontak & Outlet</h4>
+          <p style="font-size: 0.9rem; opacity: 0.9; margin-bottom: 8px;">
+            <strong>Lokasi:</strong><br>
+            Jl. Gayungsari Timur No. 7, Menanggal, Surabaya
+          </p>
+          <p style="font-size: 0.9rem; opacity: 0.9; margin-bottom: 8px;">
+            <strong>Jam Buka:</strong> 06.00 – 22.00 WIB
+          </p>
+          <p style="font-size: 0.9rem; opacity: 0.9;">
+            <strong>Telepon:</strong> (031) 8298832<br>
+            <strong>WhatsApp:</strong> 0851-5851-5332
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 <strong>Soto Kudus Kedai Taman (SODUS)</strong>. Seluruh Hak Cipta Dilindungi.
+        </div>
+        <div>
+          Terinspirasi dari akun resmi Instagram @sotokudus_kedaitaman • <a href="admin.html" style="text-decoration: underline; opacity: 0.8; font-weight: 600;" title="Portal Pengelola Admin">Portal Admin</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING ACTION BUTTONS ================= -->
+  <div class="floating-actions-container">
+    <button class="floating-btn floating-promo-btn" id="floatingPromoBtn" title="Promo Spesial Kedai Taman" style="display: none;">
+      <span>🎁 Promo 15%</span>
+    </button>
+
+    <a href="https://wa.me/6285158515332?text=Halo%20Soto%20Kudus%20Kedai%20Taman,%20saya%20mau%20order" target="_blank" rel="noopener noreferrer" class="floating-btn floating-wa-btn" id="floatingWaBtn" title="Chat WhatsApp Kedai">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.8 14.28c-.24.69-1.2 1.35-1.78 1.44-.54.09-1.22.13-3.66-.88-2.67-1.11-4.38-3.83-4.51-4.01-.13-.18-1.07-1.42-1.07-2.72 0-1.29.68-1.93.92-2.19.24-.26.53-.33.7-.33.18 0 .35.01.5.02.16.01.38-.06.59.45.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.13.29-.26.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.54.16.26.69 1.14 1.48 1.84 1.02.91 1.87 1.19 2.14 1.32.26.13.42.11.57-.07.16-.18.66-.77.84-1.03.18-.26.35-.22.59-.13.24.09 1.54.73 1.81.86.26.13.44.2.5.31.07.11.07.66-.17 1.35z"/></svg>
+      <span>Chat WA Kedai</span>
+    </a>
+
+    <button class="floating-btn floating-cart-btn cart-toggle-trigger" title="Buka Pesanan">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+      <span>Pesanan (<span class="cart-badge-count">0</span>)</span>
+    </button>
+  </div>
+
+  <!-- ================= MODAL: KERANJANG PESANAN & ORDER WA ================= -->
+  <div class="modal-overlay" id="cartModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>🛒 Keranjang Pesanan Kedai Taman</h3>
+        <button class="modal-close-btn" aria-label="Tutup">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div id="cartEmptyState" style="text-align: center; padding: 32px 10px;">
+          <div style="font-size: 3rem; margin-bottom: 10px;">🥣</div>
+          <h4 style="font-family: var(--font-serif); color: var(--color-green-dark);">Keranjang Anda Masih Kosong</h4>
+          <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-top: 6px;">
+            Yuk pilih semangkuk Soto Kudus hangat, sate telur puyuh bacem, atau minuman segar di daftar menu!
+          </p>
+          <button class="btn-primary" style="margin-top: 18px;" onclick="document.getElementById('cartModal').classList.remove('active'); window.location.hash='#menu';">
+            Pilih Menu Sekarang
+          </button>
+        </div>
+
+        <div id="cartItemsList" class="cart-items-list"></div>
+
+        <div id="cartOrderFormWrap" style="display: none;">
+          <!-- Voucher Coupon Input Section -->
+          <div class="cart-voucher-section">
+            <div style="font-weight: 700; font-size: 0.85rem; color: #15803d; margin-bottom: 6px;">Punya Kode Promo / Kupon?</div>
+            <div class="cart-voucher-row">
+              <input type="text" id="cartVoucherInput" class="cart-voucher-input" placeholder="Masukkan kode kupon..." />
+              <button type="button" id="cartApplyVoucherBtn" class="cart-voucher-btn">Terapkan</button>
+            </div>
+            <div id="cartVoucherMsg" class="cart-voucher-msg"></div>
+          </div>
+
+          <div class="cart-total-box">
+            <div class="cart-total-row">
+              <span>Subtotal Menu:</span>
+              <span id="cartSubtotalDisplay">Rp 0</span>
+            </div>
+            <div class="cart-discount-row" id="cartDiscountRow" style="display: none;">
+              <span>Diskon Voucher:</span>
+              <span id="cartDiscountDisplay">-Rp 0</span>
+            </div>
+            <div class="cart-total-row" style="margin-top: 8px; font-size: 1.15rem; color: var(--color-green-dark); border-top: 1px dashed #cbd5e1; padding-top: 8px;">
+              <span>Total Akhir:</span>
+              <span id="cartTotalDisplay">Rp 0</span>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 18px;">
+            <div class="form-group" style="margin-bottom: 12px;">
+              <label for="orderCustomerName" style="font-weight: 700; font-size: 0.9rem;">Nama Pemesan:</label>
+              <input type="text" id="orderCustomerName" class="form-input" placeholder="Masukkan nama Anda..." />
+            </div>
+
+            <div class="form-group" style="margin-bottom: 12px;">
+              <label for="orderTypeSelect" style="font-weight: 700; font-size: 0.9rem;">Pilihan Layanan:</label>
+              <select id="orderTypeSelect" class="form-input">
+                <option value="Makan di Tempat (Dine-in)">Makan di Tempat (Dine-in Kedai Taman)</option>
+                <option value="Bungkus Bawa Pulang (Takeaway)">Bungkus Bawa Pulang (Takeaway)</option>
+                <option value="Pesan Antar / Delivery">Pesan Antar / Delivery ke Alamat</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="orderCustomerNotes" style="font-weight: 700; font-size: 0.9rem;">Catatan Khusus (Opsional):</label>
+              <input type="text" id="orderCustomerNotes" class="form-input" placeholder="Cth: Kuah dipisah, banyakin bawang putih goreng..." />
+            </div>
+          </div>
+
+          <button id="sendWhatsAppBtn" class="btn-primary" style="background-color: #25D366; width: 100%; font-size: 1.05rem;">
+            💬 Kirim Format Pesanan ke WhatsApp Kedai
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: PROMO SPESIAL ================= -->
+  <div class="modal-overlay" id="promoModal">
+    <div class="promo-modal-card">
+      <div class="promo-modal-hero">
+        <img id="promoModalImg" src="images/menu/soto-kudus-campur.jpg" alt="Promo Spesial" class="promo-modal-img" />
+        <span id="promoModalBadge" class="promo-modal-badge">DISKON 15%</span>
+        <button class="modal-close-btn" style="position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.5); color: #fff; width: 34px; height: 34px; border-radius: 50%;" aria-label="Tutup Promo">&times;</button>
+      </div>
+      <div class="promo-modal-body">
+        <h3 id="promoModalTitle" class="promo-modal-title">Promo Sarapan & Santap Nikmat Kedai Taman! 🌿</h3>
+        <p id="promoModalDesc" class="promo-modal-desc">Nikmati diskon 15% untuk setiap pemesanan via website Soto Kudus Kedai Taman dengan minimal belanja Rp 40.000!</p>
+        
+        <div class="promo-voucher-box">
+          <div class="promo-voucher-code-wrap">
+            <div class="promo-voucher-label">KODE VOUCHER ANDA:</div>
+            <div id="promoModalCode" class="promo-voucher-code">SODUS15</div>
+          </div>
+          <button id="promoCopyBtn" class="btn-copy-voucher">Salin Kode</button>
+        </div>
+
+        <div id="promoModalValidity" class="promo-validity-text">Berlaku hingga 31 Desember 2026</div>
+
+        <button class="btn-primary" style="width: 100%; font-size: 0.95rem;" onclick="document.getElementById('promoModal').classList.remove('active'); window.location.hash='#menu';">
+          Pesan Menu Sekarang 🥣
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: GALERI LIGHTBOX ================= -->
+  <div class="modal-overlay" id="galleryModal">
+    <div class="modal-card lightbox-card">
+      <div class="modal-header" style="background-color: transparent; border-bottom: 1px solid rgba(255,255,255,0.2);">
+        <h3 id="galleryModalTitle">Galeri Soto Kudus Kedai Taman</h3>
+        <button class="modal-close-btn" aria-label="Tutup">&times;</button>
+      </div>
+      <div style="padding: 16px;">
+        <img id="galleryModalImg" src="" alt="Pratinjau Galeri" class="lightbox-img" />
+        <p id="galleryModalDesc" style="color: #f0fdf4; font-size: 0.92rem; margin-top: 12px;"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+================================================================================
+PETUNJUK MENGGANTI FOTO / GAMBAR WEBSITE SOTO KUDUS KEDAI TAMAN
+================================================================================
+
+Semua gambar di website ini telah dipisahkan ke dalam folder lokal yang rapi
+dan mudah dimodifikasi:
+
+--------------------------------------------------------------------------------
+1. FOLDER: images/branding/  (Logo & Identitas)
+--------------------------------------------------------------------------------
+- logo.jpg
+  -> Logo resmi "SODUS Soto Kudus Kedai Taman" (hijau putih).
+
+--------------------------------------------------------------------------------
+2. FOLDER: images/menu/  (Foto Menu Makanan & Minuman)
+--------------------------------------------------------------------------------
+* Soto Kudus Asli (SODUS):
+- soto-kudus-campur.jpg       -> Soto Kudus Ayam Campur Nasi
+- soto-kudus-pisah.jpg        -> Soto Kudus Ayam Nasi Pisah
+
+* Lauk Pendamping Khas:
+- sate-telur-puyuh.jpg        -> Sate Telur Puyuh Kecap
+- sate-ati-ampela.jpg         -> Sate Ati Ampela Gurih
+- sate-usus.jpg               -> Sate Usus Bumbu Kuning
+- perkedel-kentang.jpg        -> Perkedel Kentang Gurih
+- tempe-tahu-bacem.jpg        -> Tempe & Tahu Bacem Manis Legit
+
+* Menu Nusantara & Nasi Sambal:
+- nasi-sambal-ibu.jpg         -> Nasi Sambal Ibu (Sambal Ulek Pedas)
+- tahu-gimbal.jpg             -> Tahu Gimbal Khas Semarang
+- mie-jogja.jpg               -> Mie Jogja (Bakmi Godhog/Goreng)
+- iga-penyet.jpg              -> Iga Sapi Penyet Sambal
+- ayam-kremes.jpg             -> Ayam Goreng Kremes Renyah
+
+* Minuman Tradisional & Kopi:
+- es-teh-manis.jpg            -> Es Teh Manis Segar
+- es-jeruk.jpg                -> Es Jeruk Peras Murni
+- wedang-uwuh.jpg             -> Wedang Uwuh Rempah Hangat
+- beras-kencur.jpg            -> Jamu Beras Kencur Tradisional
+- kopi-susu-kedai-taman.jpg   -> Es Kopi Susu Gula Aren Kedai Taman
+
+* Layanan Katering:
+- tumpeng-nasi-kotak.jpg      -> Nasi Tumpeng & Nasi Kotak Acara
+
+--------------------------------------------------------------------------------
+3. FOLDER: images/galeri/  (Galeri Suasana & Hidangan)
+--------------------------------------------------------------------------------
+- galeri-1-soto-kudus-hangat.jpg     -> Foto Mangkuk Soto Kudus Hangat
+- galeri-2-sate-puyuh-lauk.jpg       -> Foto Deretan Sate Lauk Pendamping
+- galeri-3-suasana-kedai-taman.jpg   -> Foto Suasana Kedai Taman yang Asri & Hijau
+- galeri-4-tahu-gimbal-semarang.jpg  -> Foto Tahu Gimbal Semarang
+- galeri-5-penyajian-khas.jpg        -> Foto Kehangatan Penyajian Khas Soto Kudus
+- galeri-6-minuman-tradisional.jpg   -> Foto Aneka Minuman Segar & Tradisional
+
+--------------------------------------------------------------------------------
+TIPS: Cukup timpa (replace) file gambar di atas dengan foto baru menggunakan
+nama file yang SAMA PERSIS dan ekstensi .jpg. Website akan otomatis memuatnya!
+================================================================================

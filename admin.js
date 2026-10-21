@@ -645,16 +645,22 @@ async function loadAdminData() {
   }
 
   // Fetch from server / data.json
+  let loadedFromServer = false;
   try {
-    const res = await fetch('/api/data');
+    const res = await fetch('api/data');
     if (res.ok) {
       const serverData = await res.json();
       if (serverData && (serverData.menus || serverData.brand)) {
         siteData = serverData;
         localStorage.setItem('sodus_website_data', JSON.stringify(siteData));
+        loadedFromServer = true;
       }
     }
   } catch (err) {
+    // API not available
+  }
+
+  if (!loadedFromServer) {
     try {
       const fallback = await fetch('./data.json');
       if (fallback.ok) {
@@ -687,9 +693,9 @@ async function saveAdminData(msg = 'Perubahan data berhasil disimpan!') {
   // Save to localStorage
   localStorage.setItem('sodus_website_data', JSON.stringify(siteData));
 
-  // Sync to server /api/data
+  // Sync to server api/data
   try {
-    const res = await fetch('/api/data', {
+    const res = await fetch('api/data', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(siteData)

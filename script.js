@@ -591,17 +591,22 @@ async function initWebsiteData() {
   }
 
   // Fetch from server / data.json
+  let loadedFromServer = false;
   try {
-    const res = await fetch('/api/data');
+    const res = await fetch('api/data');
     if (res.ok) {
       const serverData = await res.json();
       if (serverData && (serverData.menus || serverData.brand)) {
         siteData = { ...siteData, ...serverData };
         localStorage.setItem('sodus_website_data', JSON.stringify(siteData));
+        loadedFromServer = true;
       }
     }
   } catch (err) {
-    // If /api/data fails, try fetching static data.json
+    // API not available, will use fallback
+  }
+
+  if (!loadedFromServer) {
     try {
       const fallbackRes = await fetch('./data.json');
       if (fallbackRes.ok) {

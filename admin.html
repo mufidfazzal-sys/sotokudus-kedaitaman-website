@@ -595,6 +595,112 @@
         padding: 20px 16px;
       }
     }
+
+    /* Category Filter Pills & Badges */
+    .admin-cat-pill {
+      padding: 7px 14px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      border-radius: 999px;
+      border: 1px solid var(--color-border);
+      background-color: #ffffff;
+      color: var(--color-text-muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      user-select: none;
+    }
+    .admin-cat-pill:hover {
+      background-color: var(--color-green-soft);
+      color: var(--color-green-primary);
+      border-color: var(--color-green-mint);
+    }
+    .admin-cat-pill.active {
+      background-color: var(--color-green-primary);
+      color: #ffffff;
+      border-color: var(--color-green-dark);
+      box-shadow: 0 2px 8px rgba(21, 128, 61, 0.25);
+    }
+    .admin-cat-pill.active .pill-count {
+      background: rgba(255, 255, 255, 0.28);
+      color: #ffffff;
+    }
+    .pill-count {
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 1px 7px;
+      border-radius: 999px;
+      background: rgba(15, 61, 31, 0.08);
+      color: var(--color-green-dark);
+    }
+
+    .badge-cat {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+    }
+    .badge-cat-soto {
+      background-color: #dcfce7;
+      color: #15803d;
+    }
+    .badge-cat-lauk {
+      background-color: #fef3c7;
+      color: #b45309;
+    }
+    .badge-cat-nusantara {
+      background-color: #ffedd5;
+      color: #c2410c;
+    }
+    .badge-cat-minuman {
+      background-color: #e0f2fe;
+      color: #0369a1;
+    }
+    .badge-cat-katering {
+      background-color: #f3e8ff;
+      color: #7e22ce;
+    }
+    .badge-cat-suasana {
+      background-color: #ccfbf1;
+      color: #0f766e;
+    }
+
+    .admin-gal-pill {
+      padding: 7px 14px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      border-radius: 999px;
+      border: 1px solid var(--color-border);
+      background-color: #ffffff;
+      color: var(--color-text-muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      user-select: none;
+    }
+    .admin-gal-pill:hover {
+      background-color: var(--color-green-soft);
+      color: var(--color-green-primary);
+      border-color: var(--color-green-mint);
+    }
+    .admin-gal-pill.active {
+      background-color: var(--color-green-primary);
+      color: #ffffff;
+      border-color: var(--color-green-dark);
+      box-shadow: 0 2px 8px rgba(21, 128, 61, 0.25);
+    }
+    .admin-gal-pill.active .pill-count {
+      background: rgba(255, 255, 255, 0.28);
+      color: #ffffff;
+    }
   </style>
 </head>
 <body>
@@ -676,6 +782,13 @@
           <div class="stat-number" id="statPromoStatus" style="font-size: 1.25rem;">AKTIF</div>
         </div>
       </div>
+      <div class="stat-box">
+        <div class="stat-icon" style="color: #0284c7; background: #e0f2fe;">📅</div>
+        <div class="stat-info">
+          <h4>Kolom Reservasi</h4>
+          <div class="stat-number" id="statReservationStatus" style="font-size: 1.25rem;">AKTIF</div>
+        </div>
+      </div>
     </div>
 
     <!-- Tabs Navigation Bar -->
@@ -695,6 +808,9 @@
       <button class="admin-tab-btn" data-tab="tab-contact">
         📱 Kontak & Medsos
       </button>
+      <button class="admin-tab-btn" data-tab="tab-reservation">
+        📅 Kolom Reservasi
+      </button>
       <button class="admin-tab-btn" data-tab="tab-promo">
         🎁 Promo & Voucher
       </button>
@@ -706,17 +822,30 @@
     <!-- ================= TAB 1: KELOLA MENU ================= -->
     <section class="admin-tab-pane active" id="tab-menu">
       <div class="admin-card">
-        <div class="admin-card-head">
+        <div class="admin-card-head" style="margin-bottom: 16px; flex-wrap: wrap; gap: 14px;">
           <div>
             <h3 class="admin-card-title">🥣 Daftar Menu Hidangan</h3>
-            <p class="admin-card-subtitle">Kelola harga, foto, ketersediaan menu (Tersedia / Habis), serta tambahkan menu baru.</p>
+            <p class="admin-card-subtitle">Kelola 33 menu hidangan, ubah harga, foto, ketersediaan (Tersedia / Habis), serta tambah menu baru.</p>
           </div>
-          <div style="display: flex; gap: 10px; align-items: center;">
-            <input type="text" id="adminMenuSearch" class="form-input" placeholder="Cari menu..." style="width: 220px;" />
-            <button class="btn-admin btn-primary" id="btnOpenAddMenu">
+          <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+            <input type="text" id="adminMenuSearch" class="form-input" placeholder="Cari nama / kata kunci..." style="width: 220px;" />
+            <button class="btn-admin btn-secondary" id="btnSyncDefaultMenus" style="white-space: nowrap;">
+              🔄 Sinkron 33 Menu
+            </button>
+            <button class="btn-admin btn-primary" id="btnOpenAddMenu" style="white-space: nowrap;">
               + Tambah Menu Baru
             </button>
           </div>
+        </div>
+
+        <!-- Category Filter Pills in Admin -->
+        <div class="admin-cat-filter-wrapper" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--color-border);">
+          <button class="admin-cat-pill active" data-cat="all">⭐ Semua Menu <span class="pill-count" id="adminCatCount_all">33</span></button>
+          <button class="admin-cat-pill" data-cat="soto">🥣 Soto Kudus <span class="pill-count" id="adminCatCount_soto">5</span></button>
+          <button class="admin-cat-pill" data-cat="lauk">🍢 Sate & Lauk <span class="pill-count" id="adminCatCount_lauk">10</span></button>
+          <button class="admin-cat-pill" data-cat="nusantara">🍛 Masakan Nusantara <span class="pill-count" id="adminCatCount_nusantara">7</span></button>
+          <button class="admin-cat-pill" data-cat="minuman">🥤 Minuman & Jamu <span class="pill-count" id="adminCatCount_minuman">8</span></button>
+          <button class="admin-cat-pill" data-cat="katering">🍱 Paket Katering <span class="pill-count" id="adminCatCount_katering">3</span></button>
         </div>
 
         <div class="admin-table-wrap">
@@ -850,23 +979,40 @@
     <!-- ================= TAB 3: KELOLA GALERI ================= -->
     <section class="admin-tab-pane" id="tab-gallery">
       <div class="admin-card">
-        <div class="admin-card-head">
+        <div class="admin-card-head" style="margin-bottom: 16px; flex-wrap: wrap; gap: 14px;">
           <div>
             <h3 class="admin-card-title">📸 Galeri Suasana & Hidangan</h3>
-            <p class="admin-card-subtitle">Kelola foto-foto mangkuk soto kudus, lauk pendamping, serta suasana asri taman yang tampil di website.</p>
+            <p class="admin-card-subtitle">Kelola 12 foto hidangan, lauk pauk, suasana asri kedai taman, dan katering yang tampil di website.</p>
           </div>
-          <button class="btn-admin btn-primary" id="btnOpenAddGallery">
-            + Tambah Foto Galeri
-          </button>
+          <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+            <input type="text" id="adminGallerySearch" class="form-input" placeholder="Cari foto galeri..." style="width: 220px;" />
+            <button class="btn-admin btn-secondary" id="btnSyncDefaultGallery" style="white-space: nowrap;">
+              🔄 Sinkron 12 Foto
+            </button>
+            <button class="btn-admin btn-primary" id="btnOpenAddGallery" style="white-space: nowrap;">
+              + Tambah Foto Galeri
+            </button>
+          </div>
+        </div>
+
+        <!-- Category Filter Pills for Gallery -->
+        <div class="admin-cat-filter-wrapper" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--color-border);">
+          <button class="admin-gal-pill active" data-gal-cat="all">⭐ Semua Foto <span class="pill-count" id="adminGalCount_all">12</span></button>
+          <button class="admin-gal-pill" data-gal-cat="Makanan">🍲 Makanan <span class="pill-count" id="adminGalCount_Makanan">4</span></button>
+          <button class="admin-gal-pill" data-gal-cat="Lauk">🍢 Lauk <span class="pill-count" id="adminGalCount_Lauk">2</span></button>
+          <button class="admin-gal-pill" data-gal-cat="Suasana">🌿 Suasana Taman <span class="pill-count" id="adminGalCount_Suasana">3</span></button>
+          <button class="admin-gal-pill" data-gal-cat="Minuman">🥤 Minuman <span class="pill-count" id="adminGalCount_Minuman">2</span></button>
+          <button class="admin-gal-pill" data-gal-cat="Katering">🍱 Katering <span class="pill-count" id="adminGalCount_Katering">1</span></button>
         </div>
 
         <div class="admin-table-wrap">
           <table class="admin-table">
             <thead>
               <tr>
-                <th style="width: 80px;">Foto</th>
-                <th>Judul Foto</th>
-                <th>Kategori / Badge</th>
+                <th style="width: 85px;">Foto</th>
+                <th>Judul Foto & Tagar</th>
+                <th>Kategori</th>
+                <th>Badge Khusus</th>
                 <th>Deskripsi</th>
                 <th style="text-align: right;">Aksi</th>
               </tr>
@@ -1006,6 +1152,85 @@
           <div class="form-group">
             <label class="form-label">Link ShopeeFood</label>
             <input type="text" id="contactShopeefood" class="form-input" placeholder="https://shopee.co.id/shopeefood/..." />
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= TAB: PENGATURAN RESERVASI ================= -->
+    <section class="admin-tab-pane" id="tab-reservation">
+      <div class="admin-card">
+        <div class="admin-card-head" style="margin-bottom: 20px; flex-wrap: wrap; gap: 14px;">
+          <div>
+            <h3 class="admin-card-title">📅 Pengaturan Kolom Reservasi Meja & Acara</h3>
+            <p class="admin-card-subtitle">Munculkan atau matikan formulir reservasi meja makan keluarga & pesanan katering di website utama.</p>
+          </div>
+          <button class="btn-admin btn-primary" id="btnSaveReservation">
+            💾 Simpan Pengaturan Reservasi
+          </button>
+        </div>
+
+        <!-- Banner Status Switch On/Off -->
+        <div style="background: #f8fafc; border: 2px solid var(--color-border); border-radius: var(--radius-md); padding: 20px; margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <div style="font-weight: 800; font-size: 1.05rem; color: var(--color-green-dark); margin-bottom: 4px;">
+              Tampilkan Kolom Reservasi di Website
+            </div>
+            <p style="font-size: 0.88rem; color: var(--color-text-muted); margin: 0;">
+              Jika dimatikan (OFF), seluruh formulir reservasi meja dan pesanan katering akan otomatis disembunyikan dari website utama.
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <label class="switch-label" style="transform: scale(1.15);">
+              <input type="checkbox" id="reservationEnabledCheck" checked />
+              <span class="switch-slider"></span>
+            </label>
+            <span id="reservationStatusBadge" style="font-weight: 800; font-size: 0.95rem; color: #15803d; min-width: 100px;">
+              MENYALA (ON)
+            </span>
+          </div>
+        </div>
+
+        <form id="reservationForm" class="form-grid">
+          <div class="form-group full-width">
+            <label class="form-label">Judul Formulir Reservasi</label>
+            <input type="text" id="resTitleInput" class="form-input" placeholder="Cth: Reservasi Meja / Pesan Katering" />
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">Subjudul / Keterangan Pembuka</label>
+            <input type="text" id="resSubtitleInput" class="form-input" placeholder="Cth: Silakan kirimkan permohonan reservasi tempat atau pertanyaan seputar katering acara Anda:" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Nomor WhatsApp Tujuan Konfirmasi</label>
+            <input type="text" id="resWaInput" class="form-input" placeholder="6285158515332" />
+            <span class="form-help">Formulir website akan otomatis memformat pesan dan meneruskannya ke WhatsApp nomor ini.</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Teks Tombol Kirim</label>
+            <input type="text" id="resButtonTextInput" class="form-input" placeholder="Cth: Kirimkan Permohonan Sekarang 🌿" />
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">Catatan Informasi Rombongan (Opsional)</label>
+            <input type="text" id="resNoticeInput" class="form-input" placeholder="Cth: Untuk reservasi rombongan atau paket syukuran keluarga di atas 10 orang disarankan konfirmasi H-1." />
+          </div>
+
+          <!-- Preview Simulasi Tampilan Website -->
+          <div class="form-group full-width" style="margin-top: 14px;">
+            <label class="form-label">Simulasi Tampilan Formulir di Website</label>
+            <div id="reservationPreviewCard" style="background: #ffffff; border: 1.5px dashed var(--color-green-primary); border-radius: var(--radius-md); padding: 24px; text-align: center; max-width: 600px; margin: 8px auto 0; box-shadow: var(--shadow-sm);">
+              <h4 id="previewResTitle" style="font-family: var(--font-serif); font-size: 1.3rem; color: var(--color-green-dark); margin-bottom: 6px;">Reservasi Meja / Pesan Katering</h4>
+              <p id="previewResSub" style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 12px;">Silakan kirimkan permohonan reservasi tempat atau pertanyaan...</p>
+              <div id="previewResNotice" style="background: #fefce8; border: 1px dashed #eab308; padding: 8px 14px; border-radius: 6px; font-size: 0.82rem; color: #854d0e; margin-bottom: 16px;">
+                Catatan: Untuk reservasi rombongan di atas 10 orang disarankan konfirmasi H-1.
+              </div>
+              <div id="previewResStatus" style="font-size: 0.85rem; color: #15803d; font-weight: 800;">
+                🟢 Status: Kolom Reservasi Aktif & Ditampilkan di Website
+              </div>
+            </div>
           </div>
         </form>
       </div>
@@ -1257,8 +1482,24 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label">Kategori / Badge</label>
-            <input type="text" id="galleryBadgeInput" class="form-input" placeholder="Cth: Suasana Taman atau Menu Khas" />
+            <label class="form-label">Kategori</label>
+            <select id="galleryCategorySelect" class="form-select">
+              <option value="Makanan">🍲 Makanan</option>
+              <option value="Lauk">🍢 Lauk Pendamping</option>
+              <option value="Suasana">🌿 Suasana Taman</option>
+              <option value="Minuman">🥤 Minuman & Jamu</option>
+              <option value="Katering">🍱 Katering & Acara</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Badge Label Khusus</label>
+            <input type="text" id="galleryBadgeInput" class="form-input" placeholder="Cth: Menu Khas, Suasana Taman, Menu Sultan, Gorengan Panas" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Tagar / Hashtag (Dipisahkan Spasi)</label>
+            <input type="text" id="galleryTagInput" class="form-input" placeholder="Cth: #sotokudus #kedaitaman" />
           </div>
 
           <div class="form-group">

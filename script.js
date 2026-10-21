@@ -77,262 +77,489 @@ const DEFAULT_DATA = {
     bannerBtnText: "Klaim Voucher Diskon",
     popupImage: "images/menu/soto-kudus-campur.jpg"
   },
+  reservation: {
+    enabled: true,
+    title: "Reservasi Meja / Pesan Katering",
+    subtitle: "Silakan kirimkan permohonan reservasi tempat atau pertanyaan seputar katering acara Anda:",
+    waTarget: "6285158515332",
+    buttonText: "Kirimkan Permohonan Sekarang 🌿",
+    notice: "Untuk reservasi rombongan atau paket syukuran keluarga di atas 10 orang disarankan konfirmasi H-1."
+  },
   menus: [
     {
-      id: "soto-kudus-campur",
-      name: "Soto Kudus Ayam Campur (Nasi Campur)",
-      category: "soto",
-      price: 18000,
-      isAvailable: true,
-      tag: "Bintang Utama ⭐",
-      tagClass: "tag-star",
-      desc: "Soto Kudus otentik dalam mangkuk porselen khas. Kuah kaldu ayam kampung bening gurih, suwiran ayam empuk, tauge segar renyah, seledri, dan taburan bawang putih goreng renyah langsung dicampur nasi.",
-      image: "images/menu/soto-kudus-campur.jpg"
+        "id": "soto-kudus-campur",
+        "name": "Soto Kudus Ayam Campur (Nasi Campur)",
+        "category": "soto",
+        "price": 18000,
+        "isAvailable": true,
+        "tag": "Bintang Utama ⭐",
+        "tagClass": "tag-star",
+        "desc": "Soto Kudus otentik dalam mangkuk porselen khas. Kuah kaldu ayam kampung bening gurih, suwiran ayam empuk, tauge segar renyah, seledri, dan taburan bawang putih goreng renyah langsung dicampur nasi.",
+        "image": "images/menu/soto-kudus-campur.jpg"
     },
     {
-      id: "soto-kudus-pisah",
-      name: "Soto Kudus Ayam Pisah (Nasi Terpisah)",
-      category: "soto",
-      price: 22000,
-      isAvailable: true,
-      tag: "Paling Populer 🍲",
-      tagClass: "tag-favorit",
-      desc: "Porsi kuah dan suwiran ayam kampung lebih melimpah disajikan terpisah dari sepiring nasi putih hangat bertabur bawang goreng wangi.",
-      image: "images/menu/soto-kudus-pisah.jpg"
+        "id": "soto-kudus-pisah",
+        "name": "Soto Kudus Ayam Pisah (Nasi Terpisah)",
+        "category": "soto",
+        "price": 22000,
+        "isAvailable": true,
+        "tag": "Paling Populer 🍲",
+        "tagClass": "tag-favorit",
+        "desc": "Porsi kuah dan suwiran ayam kampung lebih melimpah disajikan terpisah dari sepiring nasi putih hangat bertabur bawang goreng wangi.",
+        "image": "images/menu/soto-kudus-pisah.jpg"
     },
     {
-      id: "sate-telur-puyuh",
-      name: "Sate Telur Puyuh Kecap Bacem",
-      category: "lauk",
-      price: 5000,
-      isAvailable: true,
-      tag: "Wajib Coba 🍢",
-      tagClass: "tag-favorit",
-      desc: "Telur puyuh pilihan dimasak bumbu bacem manis gurih meresap sampai ke kuning telur, jodoh sempurna kuah soto panas.",
-      image: "images/menu/sate-telur-puyuh.jpg"
+        "id": "soto-kudus-daging-campur",
+        "name": "Soto Kudus Daging Sapi Campur",
+        "category": "soto",
+        "price": 24000,
+        "isAvailable": true,
+        "tag": "Daging Sapi Pilihan 🥩",
+        "tagClass": "tag-star",
+        "desc": "Cita rasa otentik Kudus dengan potongan daging sapi empuk gurih meresap, tauge renyah, kuah kaldu rempah harum, disajikan hangat langsung bersama nasi.",
+        "image": "images/menu/soto-kudus-daging-campur.jpg"
     },
     {
-      id: "sate-ati-ampela",
-      name: "Sate Ati Ampela Ungkep",
-      category: "lauk",
-      price: 5000,
-      isAvailable: true,
-      tag: "Gurih Legit 🍢",
-      tagClass: "tag-favorit",
-      desc: "Ati ampela ayam segar yang diungkep bumbu rempah gurih sedap, tanpa bau amis, empuk dan nikmat.",
-      image: "images/menu/sate-ati-ampela.jpg"
+        "id": "soto-kudus-daging-pisah",
+        "name": "Soto Kudus Daging Sapi Pisah",
+        "category": "soto",
+        "price": 28000,
+        "isAvailable": true,
+        "tag": "Favorit Gurih 🥩",
+        "tagClass": "tag-favorit",
+        "desc": "Semangkuk penuh kuah kaldu sapi kaya rempah dengan irisan daging sapi empuk lembut melimpah, disajikan terpisah dari nasi putih hangat.",
+        "image": "images/menu/soto-kudus-daging-pisah.jpg"
     },
     {
-      id: "sate-usus",
-      name: "Sate Usus Bumbu Kuning",
-      category: "lauk",
-      price: 4000,
-      isAvailable: true,
-      tag: "Favorit Pelanggan 🍢",
-      tagClass: "tag-favorit",
-      desc: "Usus ayam bersih dimasak bumbu kuning tradisional dengan rasa gurih manis yang pas.",
-      image: "images/menu/sate-usus.jpg"
+        "id": "soto-kudus-spesial-komplit",
+        "name": "Soto Kudus Spesial Komplit Kedai Taman",
+        "category": "soto",
+        "price": 30000,
+        "isAvailable": true,
+        "tag": "Porsi Istimewa ⭐",
+        "tagClass": "tag-star",
+        "desc": "Porsi komplit istimewa: suwiran ayam kampung melimpah, telur bacem utuh, perkedel kentang lembut, dan taburan bawang putih goreng ekstra garing di kuah kaldu emas.",
+        "image": "images/menu/soto-kudus-spesial-komplit.jpg"
     },
     {
-      id: "perkedel-kentang",
-      name: "Perkedel Kentang Spesial",
-      category: "lauk",
-      price: 4000,
-      isAvailable: true,
-      tag: "Renyah Lembut 🥔",
-      tagClass: "tag-favorit",
-      desc: "Olahan kentang tumbuk lembut dengan bumbu rempah daun bawang dan balutan telur renyah.",
-      image: "images/menu/perkedel-kentang.jpg"
+        "id": "sate-telur-puyuh",
+        "name": "Sate Telur Puyuh Kecap Bacem",
+        "category": "lauk",
+        "price": 5000,
+        "isAvailable": true,
+        "tag": "Wajib Coba 🍢",
+        "tagClass": "tag-favorit",
+        "desc": "Telur puyuh pilihan dimasak bumbu bacem manis gurih meresap sampai ke kuning telur, jodoh sempurna kuah soto panas.",
+        "image": "images/menu/sate-telur-puyuh.jpg"
     },
     {
-      id: "tempe-tahu-bacem",
-      name: "Tempe & Tahu Bacem Tradisional",
-      category: "lauk",
-      price: 4000,
-      isAvailable: true,
-      tag: "Manis Gurih 🥢",
-      tagClass: "tag-favorit",
-      desc: "Tempe dan tahu kedelai yang direbus perlahan dengan gula merah dan ketumbar wangi meresap.",
-      image: "images/menu/tempe-tahu-bacem.jpg"
+        "id": "sate-ati-ampela",
+        "name": "Sate Ati Ampela Ungkep",
+        "category": "lauk",
+        "price": 5000,
+        "isAvailable": true,
+        "tag": "Gurih Legit 🍢",
+        "tagClass": "tag-favorit",
+        "desc": "Ati ampela ayam segar yang diungkep bumbu rempah gurih sedap, tanpa bau amis, empuk dan nikmat.",
+        "image": "images/menu/sate-ati-ampela.jpg"
     },
     {
-      id: "nasi-sambal-ibu",
-      name: "Nasi Sambal Ibu (Ayam Goreng)",
-      category: "nusantara",
-      price: 25000,
-      isAvailable: true,
-      tag: "Menu Andalan 🌶️",
-      tagClass: "tag-nusantara",
-      desc: "Menu viral khas Kedai Taman! Nasi putih dengan sambal ulek segar pedas nampol, ayam goreng gurih rempah, tahu, tempe, dan lalapan segar.",
-      image: "images/menu/nasi-sambal-ibu.jpg"
+        "id": "sate-usus",
+        "name": "Sate Usus Bumbu Kuning",
+        "category": "lauk",
+        "price": 4000,
+        "isAvailable": true,
+        "tag": "Favorit Pelanggan 🍢",
+        "tagClass": "tag-favorit",
+        "desc": "Usus ayam bersih dimasak bumbu kuning tradisional dengan rasa gurih manis yang pas.",
+        "image": "images/menu/sate-usus.jpg"
     },
     {
-      id: "tahu-gimbal",
-      name: "Tahu Gimbal Khas Semarang",
-      category: "nusantara",
-      price: 22000,
-      isAvailable: true,
-      tag: "Khas Pesisir 🦐",
-      tagClass: "tag-nusantara",
-      desc: "Potongan tahu goreng panas, gimbal udang renyah kriuk, tauge segar, kol rajang disiram bumbu kacang petis legit yang sedap mantap.",
-      image: "images/menu/tahu-gimbal.jpg"
+        "id": "sate-kerang",
+        "name": "Sate Kerang Bumbu Manis Gurih",
+        "category": "lauk",
+        "price": 5000,
+        "isAvailable": true,
+        "tag": "Khas Pesisir 🦪",
+        "tagClass": "tag-favorit",
+        "desc": "Kerang dara segar dimasak bumbu kecap rempah manis gurih khas pesisir Jawa Timur, bertekstur kenyal legit dan harum.",
+        "image": "images/menu/sate-kerang.jpg"
     },
     {
-      id: "mie-jogja",
-      name: "Mie Jogja (Bakmi Jawa Godhog/Goreng)",
-      category: "nusantara",
-      price: 22000,
-      isAvailable: true,
-      tag: "Aroma Gurih 🍜",
-      tagClass: "tag-nusantara",
-      desc: "Bakmi kuning khas tradisional Yogyakarta dimasak dengan telur bebek, suwiran ayam, kubis, dan kaldu gurih beraroma arang.",
-      image: "images/menu/mie-jogja.jpg"
+        "id": "perkedel-kentang",
+        "name": "Perkedel Kentang Spesial",
+        "category": "lauk",
+        "price": 4000,
+        "isAvailable": true,
+        "tag": "Renyah Lembut 🥔",
+        "tagClass": "tag-favorit",
+        "desc": "Olahan kentang tumbuk lembut dengan bumbu rempah daun bawang dan balutan telur renyah.",
+        "image": "images/menu/perkedel-kentang.jpg"
     },
     {
-      id: "iga-penyet",
-      name: "Iga Sapi Penyet Sambal Bawang",
-      category: "nusantara",
-      price: 35000,
-      isAvailable: true,
-      tag: "Menu Sultan 🥩",
-      tagClass: "tag-nusantara",
-      desc: "Potongan iga sapi tebal empuk yang digoreng garing lalu dipenyet di atas cobek sambal bawang pedas semerbak.",
-      image: "images/menu/iga-penyet.jpg"
+        "id": "tempe-tahu-bacem",
+        "name": "Tempe & Tahu Bacem Tradisional",
+        "category": "lauk",
+        "price": 4000,
+        "isAvailable": true,
+        "tag": "Manis Gurih 🥢",
+        "tagClass": "tag-favorit",
+        "desc": "Tempe dan tahu kedelai yang direbus perlahan dengan gula merah dan ketumbar wangi meresap.",
+        "image": "images/menu/tempe-tahu-bacem.jpg"
     },
     {
-      id: "ayam-kremes",
-      name: "Ayam Goreng Kremes Kedai Taman",
-      category: "nusantara",
-      price: 24000,
-      isAvailable: true,
-      tag: "Kriuk Gurih 🍗",
-      tagClass: "tag-nusantara",
-      desc: "Ayam ungkep rempah disajikan dengan taburan kremesan sarang burung yang renyah gurih tahan lama.",
-      image: "images/menu/ayam-kremes.jpg"
+        "id": "tempe-mendoan",
+        "name": "Tempe Mendoan Panas (Isi 3)",
+        "category": "lauk",
+        "price": 12000,
+        "isAvailable": true,
+        "tag": "Gorengan Hangat 🥢",
+        "tagClass": "tag-favorit",
+        "desc": "Tempe lebar berbalut adonan tepung daun bawang kucai yang digoreng hangat lembut gurih, disajikan lengkap dengan sambal kecap rawit pedas.",
+        "image": "images/menu/tempe-mendoan.jpg"
     },
     {
-      id: "es-teh-manis",
-      name: "Es Teh Manis Melati",
-      category: "minuman",
-      price: 5000,
-      isAvailable: true,
-      tag: "Pelepas Dahaga 🥤",
-      tagClass: "tag-drink",
-      desc: "Teh melati wangi khas Jawa diseduh tradisional dengan es batu dingin menyegarkan.",
-      image: "images/menu/es-teh-manis.jpg"
+        "id": "peyek-kacang",
+        "name": "Peyek Kacang Daun Jeruk Renyah",
+        "category": "lauk",
+        "price": 5000,
+        "isAvailable": true,
+        "tag": "Kriuk Gurih 🥜",
+        "tagClass": "tag-favorit",
+        "desc": "Rempeyek kacang tanah bertabur irisan daun jeruk purut wangi, super renyah dan gurih sebagai pelengkap santapan berkuah.",
+        "image": "images/menu/peyek-kacang.jpg"
     },
     {
-      id: "es-jeruk",
-      name: "Es Jeruk Peras Segar",
-      category: "minuman",
-      price: 8000,
-      isAvailable: true,
-      tag: "Jeruk Murni 🍊",
-      tagClass: "tag-drink",
-      desc: "Perasan air jeruk manis alami segar dengan gula pasir murni dan es batu dingin.",
-      image: "images/menu/es-jeruk.jpg"
+        "id": "kerupuk-kaleng",
+        "name": "Kerupuk Putih Kaleng Biru",
+        "category": "lauk",
+        "price": 2000,
+        "isAvailable": true,
+        "tag": "Klasik Kedai 🌾",
+        "tagClass": "tag-favorit",
+        "desc": "Kerupuk uyel putih bundar klasik khas warung soto, renyah gurih menggoda saat dicelup ke kuah soto hangat.",
+        "image": "images/menu/kerupuk-kaleng.jpg"
     },
     {
-      id: "wedang-uwuh",
-      name: "Wedang Uwuh Rempah Imogiri",
-      category: "minuman",
-      price: 10000,
-      isAvailable: true,
-      tag: "Hangat Sehat 🌿",
-      tagClass: "tag-drink",
-      desc: "Minuman rempah herbal berkhasiat dengan kayu secang, jahe bakar, cengkeh, kayu manis, dan gula batu.",
-      image: "images/menu/wedang-uwuh.jpg"
+        "id": "nasi-putih",
+        "name": "Nasi Putih Hangat Pulen",
+        "category": "lauk",
+        "price": 5000,
+        "isAvailable": true,
+        "tag": "Pulen Wangi 🍚",
+        "tagClass": "tag-favorit",
+        "desc": "Sepiring nasi putih beras pilihan yang pulen dan hangat, ditaburi bawang merah goreng harum.",
+        "image": "images/menu/nasi-putih.jpg"
     },
     {
-      id: "beras-kencur",
-      name: "Jamu Beras Kencur Tradisional",
-      category: "minuman",
-      price: 10000,
-      isAvailable: true,
-      tag: "Jamu Alami 🌾",
-      tagClass: "tag-drink",
-      desc: "Ramuan tradisional beras kencur segar penghangat tubuh dan penambah nafsu makan.",
-      image: "images/menu/beras-kencur.jpg"
+        "id": "nasi-sambal-ibu",
+        "name": "Nasi Sambal Ibu (Ayam Goreng)",
+        "category": "nusantara",
+        "price": 25000,
+        "isAvailable": true,
+        "tag": "Menu Andalan 🌶️",
+        "tagClass": "tag-nusantara",
+        "desc": "Menu viral khas Kedai Taman! Nasi putih dengan sambal ulek segar pedas nampol, ayam goreng gurih rempah, tahu, tempe, dan lalapan segar.",
+        "image": "images/menu/nasi-sambal-ibu.jpg"
     },
     {
-      id: "kopi-susu-kedai-taman",
-      name: "Es Kopi Susu Gula Aren Kedai Taman",
-      category: "minuman",
-      price: 15000,
-      isAvailable: true,
-      tag: "Racikan Kopi ☕",
-      tagClass: "tag-drink",
-      desc: "Espresso blend pilihan dipadu susu creamy dan manis legit gula aren murni.",
-      image: "images/menu/kopi-susu-kedai-taman.jpg"
+        "id": "tahu-gimbal",
+        "name": "Tahu Gimbal Khas Semarang",
+        "category": "nusantara",
+        "price": 22000,
+        "isAvailable": true,
+        "tag": "Khas Pesisir 🦐",
+        "tagClass": "tag-nusantara",
+        "desc": "Potongan tahu goreng panas, gimbal udang renyah kriuk, tauge segar, kol rajang disiram bumbu kacang petis legit yang sedap mantap.",
+        "image": "images/menu/tahu-gimbal.jpg"
     },
     {
-      id: "tumpeng-nasi-kotak",
-      name: "Paket Nasi Kotak & Tumpeng Acara",
-      category: "katering",
-      price: 25000,
-      isAvailable: true,
-      tag: "Catering & Event 🍱",
-      tagClass: "tag-star",
-      desc: "Menerima pesanan nasi kotak syukuran, tumpeng mini/besar untuk acara kantor, arisan, pengajian dan ulang tahun.",
-      image: "images/menu/tumpeng-nasi-kotak.jpg"
+        "id": "mie-jogja",
+        "name": "Mie Jogja (Bakmi Jawa Godhog/Goreng)",
+        "category": "nusantara",
+        "price": 22000,
+        "isAvailable": true,
+        "tag": "Aroma Gurih 🍜",
+        "tagClass": "tag-nusantara",
+        "desc": "Bakmi kuning khas tradisional Yogyakarta dimasak dengan telur bebek, suwiran ayam, kubis, dan kaldu gurih beraroma arang.",
+        "image": "images/menu/mie-jogja.jpg"
+    },
+    {
+        "id": "iga-penyet",
+        "name": "Iga Sapi Penyet Sambal Bawang",
+        "category": "nusantara",
+        "price": 35000,
+        "isAvailable": true,
+        "tag": "Menu Sultan 🥩",
+        "tagClass": "tag-nusantara",
+        "desc": "Potongan iga sapi tebal empuk yang digoreng garing lalu dipenyet di atas cobek sambal bawang pedas semerbak.",
+        "image": "images/menu/iga-penyet.jpg"
+    },
+    {
+        "id": "ayam-kremes",
+        "name": "Ayam Goreng Kremes Kedai Taman",
+        "category": "nusantara",
+        "price": 24000,
+        "isAvailable": true,
+        "tag": "Kriuk Gurih 🍗",
+        "tagClass": "tag-nusantara",
+        "desc": "Ayam ungkep rempah disajikan dengan taburan kremesan sarang burung yang renyah gurih tahan lama.",
+        "image": "images/menu/ayam-kremes.jpg"
+    },
+    {
+        "id": "rawon-surabaya",
+        "name": "Rawon Daging Sapi Khas Surabaya",
+        "category": "nusantara",
+        "price": 28000,
+        "isAvailable": true,
+        "tag": "Khas Jatim 🍲",
+        "tagClass": "tag-nusantara",
+        "desc": "Kuah rawon hitam pekat kaya rempah kluwek pilihan, potongan daging sapi empuk, tauge pendek renyah, dan sambal terasi gurih.",
+        "image": "images/menu/rawon-surabaya.jpg"
+    },
+    {
+        "id": "nasi-goreng-jawa",
+        "name": "Nasi Goreng Jawa Tradisional",
+        "category": "nusantara",
+        "price": 23000,
+        "isAvailable": true,
+        "tag": "Resep Klasik 🍳",
+        "tagClass": "tag-nusantara",
+        "desc": "Nasi goreng racikan bumbu khas Jawa beraroma smokey gurih, dilengkapi telur orak-arik, suwiran ayam kampung, kerupuk, dan acar segar.",
+        "image": "images/menu/nasi-goreng-jawa.jpg"
+    },
+    {
+        "id": "es-teh-manis",
+        "name": "Es Teh Manis Melati",
+        "category": "minuman",
+        "price": 5000,
+        "isAvailable": true,
+        "tag": "Pelepas Dahaga 🥤",
+        "tagClass": "tag-drink",
+        "desc": "Teh melati wangi khas Jawa diseduh tradisional dengan es batu dingin menyegarkan.",
+        "image": "images/menu/es-teh-manis.jpg"
+    },
+    {
+        "id": "es-jeruk",
+        "name": "Es Jeruk Peras Segar",
+        "category": "minuman",
+        "price": 8000,
+        "isAvailable": true,
+        "tag": "Jeruk Murni 🍊",
+        "tagClass": "tag-drink",
+        "desc": "Perasan air jeruk manis alami segar dengan gula pasir murni dan es batu dingin.",
+        "image": "images/menu/es-jeruk.jpg"
+    },
+    {
+        "id": "wedang-uwuh",
+        "name": "Wedang Uwuh Rempah Imogiri",
+        "category": "minuman",
+        "price": 10000,
+        "isAvailable": true,
+        "tag": "Hangat Sehat 🌿",
+        "tagClass": "tag-drink",
+        "desc": "Minuman rempah herbal berkhasiat dengan kayu secang, jahe bakar, cengkeh, kayu manis, dan gula batu.",
+        "image": "images/menu/wedang-uwuh.jpg"
+    },
+    {
+        "id": "beras-kencur",
+        "name": "Jamu Beras Kencur Tradisional",
+        "category": "minuman",
+        "price": 10000,
+        "isAvailable": true,
+        "tag": "Jamu Alami 🌾",
+        "tagClass": "tag-drink",
+        "desc": "Ramuan tradisional beras kencur segar penghangat tubuh dan penambah nafsu makan.",
+        "image": "images/menu/beras-kencur.jpg"
+    },
+    {
+        "id": "kopi-susu-kedai-taman",
+        "name": "Es Kopi Susu Gula Aren Kedai Taman",
+        "category": "minuman",
+        "price": 15000,
+        "isAvailable": true,
+        "tag": "Racikan Kopi ☕",
+        "tagClass": "tag-drink",
+        "desc": "Espresso blend pilihan dipadu susu creamy dan manis legit gula aren murni.",
+        "image": "images/menu/kopi-susu-kedai-taman.jpg"
+    },
+    {
+        "id": "es-sinom",
+        "name": "Es Sinom Khas Surabaya Segar",
+        "category": "minuman",
+        "price": 8000,
+        "isAvailable": true,
+        "tag": "Segar Alami 🍃",
+        "tagClass": "tag-drink",
+        "desc": "Minuman herbal segar daun asam muda (sinom) dan kunyit asam asli Jawa Timur dengan gula aren alami, sangat sejuk di tenggorokan.",
+        "image": "images/menu/es-sinom.jpg"
+    },
+    {
+        "id": "es-degan-jeruk",
+        "name": "Es Degan Kelapa Muda Jeruk",
+        "category": "minuman",
+        "price": 12000,
+        "isAvailable": true,
+        "tag": "Favorit Siang 🥥",
+        "tagClass": "tag-drink",
+        "desc": "Air kelapa muda murni segar dengan serutan daging kelapa lembut dipadu kesegaran perasan jeruk nipis alami.",
+        "image": "images/menu/es-degan-jeruk.jpg"
+    },
+    {
+        "id": "wedang-jahe-sereh",
+        "name": "Wedang Jahe Sereh Hangat Gula Batu",
+        "category": "minuman",
+        "price": 9000,
+        "isAvailable": true,
+        "tag": "Penghangat Tubuh 🫖",
+        "tagClass": "tag-drink",
+        "desc": "Geprekan jahe merah bakar dan batang sereh wangi diseduh air panas dengan pemanis gula batu alami.",
+        "image": "images/menu/wedang-jahe-sereh.jpg"
+    },
+    {
+        "id": "tumpeng-nasi-kotak",
+        "name": "Paket Nasi Kotak & Tumpeng Acara",
+        "category": "katering",
+        "price": 25000,
+        "isAvailable": true,
+        "tag": "Catering & Event 🍱",
+        "tagClass": "tag-star",
+        "desc": "Menerima pesanan nasi kotak syukuran, tumpeng mini maupun tumpeng besar untuk acara kantor, arisan, pengajian dan syukuran keluarga.",
+        "image": "images/menu/tumpeng-nasi-kotak.jpg"
+    },
+    {
+        "id": "paket-sarapan-box",
+        "name": "Paket Sarapan Box Soto Kudus (Min. 5 Box)",
+        "category": "katering",
+        "price": 22000,
+        "isAvailable": true,
+        "tag": "Sarapan Kantor 🍱",
+        "tagClass": "tag-favorit",
+        "desc": "Box sarapan praktis berisi mangkuk ramah lingkungan Soto Kudus Ayam, nasi putih terpisah, sate telur puyuh, perkedel kentang, dan kerupuk.",
+        "image": "images/menu/paket-sarapan-box.jpg"
+    },
+    {
+        "id": "paket-prasmanan",
+        "name": "Paket Prasmanan Soto Kudus (Min. 30 Pax)",
+        "category": "katering",
+        "price": 45000,
+        "isAvailable": true,
+        "tag": "Jamuan Lengkap 🍽️",
+        "tagClass": "tag-star",
+        "desc": "Layanan prasmanan live-cooking lengkap dengan stall Soto Kudus panas, aneka sate bacem komplit, lauk nusantara, es teh/es jeruk, dan waiter profesional.",
+        "image": "images/menu/paket-prasmanan.jpg"
     }
-  ],
+],
   gallery: [
     {
-      id: "galeri-1",
-      title: "Soto Kudus Mangkuk Tradisional",
-      category: "Makanan",
-      badge: "Menu Khas",
-      tag: "#sotokudus #ayamkampung",
-      desc: "Kuah kaldu ayam kampung bening gurih kekuningan dengan taburan bawang putih goreng renyah dan perasan jeruk limau segar.",
-      image: "images/galeri/galeri-1-soto-kudus-hangat.jpg"
+        "id": "galeri-1",
+        "title": "Soto Kudus Mangkuk Tradisional",
+        "category": "Makanan",
+        "badge": "Menu Khas",
+        "tag": "#sotokudus #ayamkampung",
+        "desc": "Kuah kaldu ayam kampung bening gurih kekuningan dengan taburan bawang putih goreng renyah dan perasan jeruk limau segar.",
+        "image": "images/galeri/galeri-1-soto-kudus-hangat.jpg"
     },
     {
-      id: "galeri-2",
-      title: "Deretan Sate Bacem & Lauk Pendamping",
-      category: "Lauk",
-      badge: "Lauk Pendamping",
-      tag: "#satepuyuh #baceman",
-      desc: "Sate telur puyuh kecap, sate ati ampela, sate usus, dan perkedel kentang yang selalu siap menemani semangkuk soto Anda.",
-      image: "images/galeri/galeri-2-sate-puyuh-lauk.jpg"
+        "id": "galeri-2",
+        "title": "Deretan Sate Bacem & Lauk Pendamping",
+        "category": "Lauk",
+        "badge": "Lauk Pendamping",
+        "tag": "#satepuyuh #baceman",
+        "desc": "Sate telur puyuh kecap, sate ati ampela, sate usus, dan perkedel kentang yang selalu siap menemani semangkuk soto Anda.",
+        "image": "images/galeri/galeri-2-sate-puyuh-lauk.jpg"
     },
     {
-      id: "galeri-3",
-      title: "Suasana Rindang Kedai Taman",
-      category: "Suasana",
-      badge: "Suasana Taman",
-      tag: "#kedaitaman #surabayaasri",
-      desc: "Tempat makan yang asri dengan pepohonan hijau, udara sejuk, dan suasana ramah keluarga di Gayungsari Surabaya.",
-      image: "images/galeri/galeri-3-suasana-kedai-taman.jpg"
+        "id": "galeri-3",
+        "title": "Suasana Rindang Kedai Taman",
+        "category": "Suasana",
+        "badge": "Suasana Taman",
+        "tag": "#kedaitaman #surabayaasri",
+        "desc": "Tempat makan yang asri dengan pepohonan hijau, udara sejuk, dan suasana ramah keluarga di Gayungsari Surabaya.",
+        "image": "images/galeri/galeri-3-suasana-kedai-taman.jpg"
     },
     {
-      id: "galeri-4",
-      title: "Tahu Gimbal Khas Semarang",
-      category: "Makanan",
-      badge: "Kuliner Pesisir",
-      tag: "#tahugimbal #semarang",
-      desc: "Tahu goreng hangat dengan gimbal udang renyah, kubis segar, tauge, dan siraman bumbu kacang petis yang medok sedap.",
-      image: "images/galeri/galeri-4-tahu-gimbal-semarang.jpg"
+        "id": "galeri-4",
+        "title": "Tahu Gimbal Khas Semarang",
+        "category": "Makanan",
+        "badge": "Kuliner Pesisir",
+        "tag": "#tahugimbal #semarang",
+        "desc": "Tahu goreng hangat dengan gimbal udang renyah, kubis segar, tauge, dan siraman bumbu kacang petis yang medok sedap.",
+        "image": "images/galeri/galeri-4-tahu-gimbal-semarang.jpg"
     },
     {
-      id: "galeri-5",
-      title: "Penyajian Hangat & Higienis",
-      category: "Suasana",
-      badge: "Otentik",
-      tag: "#resepwarisan #kudus",
-      desc: "Setiap hidangan disajikan dengan standar kebersihan tinggi dan bumbu rempah racikan khas nusantara.",
-      image: "images/galeri/galeri-5-penyajian-khas.jpg"
+        "id": "galeri-5",
+        "title": "Penyajian Hangat & Higienis",
+        "category": "Suasana",
+        "badge": "Higienis & Otentik",
+        "tag": "#resepwarisan #kudus",
+        "desc": "Setiap hidangan disajikan dengan standar kebersihan tinggi dan bumbu rempah racikan khas nusantara.",
+        "image": "images/galeri/galeri-5-penyajian-khas.jpg"
     },
     {
-      id: "galeri-6",
-      title: "Minuman Tradisional & Kopi",
-      category: "Minuman",
-      badge: "Segar & Berkhasiat",
-      tag: "#wedanguwuh #kopisusu",
-      desc: "Pilihan wedang uwuh hangat, jamu beras kencur, es jeruk peras alami, hingga es kopi susu gula aren.",
-      image: "images/galeri/galeri-6-minuman-tradisional.jpg"
+        "id": "galeri-6",
+        "title": "Minuman Tradisional & Kopi Susu",
+        "category": "Minuman",
+        "badge": "Segar & Berkhasiat",
+        "tag": "#wedanguwuh #kopisusu",
+        "desc": "Pilihan wedang uwuh hangat, jamu beras kencur, es jeruk peras alami, hingga es kopi susu gula aren.",
+        "image": "images/galeri/galeri-6-minuman-tradisional.jpg"
+    },
+    {
+        "id": "galeri-7",
+        "title": "Soto Kudus Daging Sapi Kuah Rempah",
+        "category": "Makanan",
+        "badge": "Menu Istimewa",
+        "tag": "#sotodagingsapi #rempah",
+        "desc": "Potongan daging sapi empuk dengan kuah kaldu rempah harum yang disajikan terpisah bersama nasi hangat.",
+        "image": "images/galeri/galeri-7-soto-daging-rempah.jpg"
+    },
+    {
+        "id": "galeri-8",
+        "title": "Tempe Mendoan Panas & Sambal Kecap",
+        "category": "Lauk",
+        "badge": "Gorengan Panas",
+        "tag": "#mendoan #kucai",
+        "desc": "Tempe mendoan lembut berbalut tepung daun bawang wangi disajikan segar mendidih dari wajan bersama kecap rawit pedas.",
+        "image": "images/galeri/galeri-8-mendoan-panas.jpg"
+    },
+    {
+        "id": "galeri-9",
+        "title": "Iga Sapi Penyet Cobek Sambal Bawang",
+        "category": "Makanan",
+        "badge": "Menu Sultan",
+        "tag": "#igapenyet #pedasnampol",
+        "desc": "Iga sapi bakar penyet empuk gurih dengan limpahan sambal bawang segar yang menggugah selera santap siang.",
+        "image": "images/galeri/galeri-9-iga-penyet-sambal.jpg"
+    },
+    {
+        "id": "galeri-10",
+        "title": "Wedang Rempah Uwuh & Jamu Herbal",
+        "category": "Minuman",
+        "badge": "Hangat Sehat",
+        "tag": "#wedanguwuh #jamuherbal",
+        "desc": "Racikan dedaunan dan rempah kayu secang, jahe bakar geprek, cengkeh wangi dengan manis batu murni.",
+        "image": "images/galeri/galeri-10-wedang-rempah.jpg"
+    },
+    {
+        "id": "galeri-11",
+        "title": "Paket Tumpeng & Nasi Kotak Syukuran",
+        "category": "Katering",
+        "badge": "Pesanan Acara",
+        "tag": "#tumpengsurabaya #nasikotak",
+        "desc": "Penyajian tumpeng kuning komplit dan nasi kotak higienis untuk berbagai acara keluarga, syukuran kantor, dan arisan.",
+        "image": "images/galeri/galeri-11-tumpeng-syukuran.jpg"
+    },
+    {
+        "id": "galeri-12",
+        "title": "Area Santap Keluarga Semi-Outdoor Rindang",
+        "category": "Suasana",
+        "badge": "Ramah Keluarga",
+        "tag": "#tamanrindang #gayungan",
+        "desc": "Suasana santap nyaman semi-outdoor di bawah keteduhan pepohonan hijau, fasilitas musholla dan parkir luas.",
+        "image": "images/galeri/galeri-12-area-santap-taman.jpg"
     }
-  ]
+]
 };
 
 // Global App State
@@ -351,6 +578,12 @@ async function initWebsiteData() {
   if (cached) {
     try {
       const parsed = JSON.parse(cached);
+      if (parsed.menus && parsed.menus.length < DEFAULT_DATA.menus.length) {
+        parsed.menus = DEFAULT_DATA.menus;
+      }
+      if (parsed.gallery && parsed.gallery.length < DEFAULT_DATA.gallery.length) {
+        parsed.gallery = DEFAULT_DATA.gallery;
+      }
       siteData = { ...siteData, ...parsed };
     } catch (e) {
       console.warn('Error reading localStorage cache:', e);
@@ -387,10 +620,12 @@ async function initWebsiteData() {
 
 function applyAllDataToDOM() {
   renderBrandAndHero();
+  updateCategoryTabBadges();
   renderMenus();
   renderGallery();
   renderLocationAndContacts();
   renderPromoFeatures();
+  renderReservationSection();
   checkOpenStatus();
 }
 
@@ -458,6 +693,34 @@ function renderBrandAndHero() {
 // ==========================================
 // 3. MENU RENDERING & INTERACTIONS
 // ==========================================
+function updateCategoryTabBadges() {
+  const menus = siteData.menus || DEFAULT_DATA.menus;
+  const counts = {
+    all: menus.length,
+    soto: menus.filter(m => m.category === 'soto').length,
+    lauk: menus.filter(m => m.category === 'lauk').length,
+    nusantara: menus.filter(m => m.category === 'nusantara').length,
+    minuman: menus.filter(m => m.category === 'minuman').length,
+    katering: menus.filter(m => m.category === 'katering').length
+  };
+
+  const titles = {
+    all: '⭐ Semua Menu',
+    soto: '🥣 Soto Kudus (SODUS)',
+    lauk: '🍢 Sate & Lauk Pendamping',
+    nusantara: '🍛 Masakan Nusantara',
+    minuman: '🥤 Minuman & Jamu',
+    katering: '🍱 Paket Katering'
+  };
+
+  document.querySelectorAll('.category-tab-btn').forEach(btn => {
+    const cat = btn.getAttribute('data-category');
+    if (cat && counts[cat] !== undefined) {
+      btn.innerHTML = `${titles[cat]} <span class="tab-count-badge">${counts[cat]}</span>`;
+    }
+  });
+}
+
 function renderMenus() {
   const container = document.getElementById('menuGrid');
   if (!container) return;
@@ -496,7 +759,7 @@ function renderMenus() {
     return `
       <div class="menu-card ${unavailableClass}" data-id="${item.id}">
         <div class="menu-img-wrap">
-          <img src="${item.image || 'images/menu/soto-kudus-campur.jpg'}" alt="${item.name}" loading="lazy" />
+          <img src="${item.image || 'images/menu/soto-kudus-campur.jpg'}" alt="${item.name}" loading="lazy" onerror="this.onerror=null; this.src='images/menu/soto-kudus-campur.jpg';" />
           ${tagHtml}
         </div>
         <div class="menu-content">
@@ -507,13 +770,13 @@ function renderMenus() {
           <p class="menu-item-desc">${item.desc || ''}</p>
           <div class="menu-actions">
             ${isAvailable ? `
-              <button class="btn-primary add-to-cart-btn" onclick="addToCart('${item.id}')" style="width: 100%; justify-content: center; padding: 10px 16px;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-                + Tambah Pesanan
+              <button class="add-to-cart-btn" onclick="addToCart('${item.id}')" aria-label="Tambah ${item.name} ke pesanan">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                <span>+ Tambah Pesanan</span>
               </button>
             ` : `
-              <button class="btn-primary add-to-cart-btn" disabled style="width: 100%; justify-content: center; padding: 10px 16px; background: #94a3b8; cursor: not-allowed;">
-                Stok Sedang Habis
+              <button class="add-to-cart-btn btn-disabled" disabled>
+                <span>Stok Habis</span>
               </button>
             `}
           </div>
@@ -746,6 +1009,44 @@ function renderPromoFeatures() {
 function openPromoModal() {
   const modal = document.getElementById('promoModal');
   if (modal) modal.classList.add('active');
+}
+
+// ==========================================
+// 6B. RESERVATION SECTION TOGGLE & RENDER
+// ==========================================
+function renderReservationSection() {
+  const section = document.getElementById('reservationSection');
+  if (!section) return;
+
+  const resData = siteData.reservation || DEFAULT_DATA.reservation || { enabled: true };
+  const isEnabled = (resData.enabled !== false);
+
+  if (!isEnabled) {
+    section.style.display = 'none';
+    return;
+  }
+
+  section.style.display = 'block';
+
+  const titleEl = document.getElementById('reservationTitle');
+  if (titleEl && resData.title) titleEl.textContent = resData.title;
+
+  const subEl = document.getElementById('reservationSubtitle');
+  if (subEl && resData.subtitle) subEl.textContent = resData.subtitle;
+
+  const noticeBox = document.getElementById('reservationNoticeBox');
+  const noticeText = document.getElementById('reservationNoticeText');
+  if (noticeBox && noticeText) {
+    if (resData.notice && resData.notice.trim() !== '') {
+      noticeText.textContent = resData.notice.trim();
+      noticeBox.style.display = 'block';
+    } else {
+      noticeBox.style.display = 'none';
+    }
+  }
+
+  const btnEl = document.getElementById('reservationSubmitBtn');
+  if (btnEl && resData.buttonText) btnEl.textContent = resData.buttonText;
 }
 
 // ==========================================
@@ -1049,14 +1350,33 @@ function initModals() {
     });
   }
 
-  // Reservation Form
+  // Reservation Form Submit Handler
   const feedbackForm = document.getElementById('feedbackForm');
   if (feedbackForm) {
     feedbackForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = feedbackForm.querySelector('[name="name"]')?.value || 'Bapak/Ibu';
-      alert(`Terima kasih banyak ${name}! Pesan / permohonan reservasi Anda telah kami terima. Tim Soto Kudus Kedai Taman akan segera menghubungi Anda. 🙏🌿`);
+      const name = feedbackForm.querySelector('[name="name"]')?.value.trim() || 'Pelanggan';
+      const phone = feedbackForm.querySelector('[name="phone"]')?.value.trim() || '-';
+      const type = feedbackForm.querySelector('[name="type"]')?.value || 'Reservasi Meja Makan';
+      const message = feedbackForm.querySelector('[name="message"]')?.value.trim() || '-';
+
+      const resData = siteData.reservation || DEFAULT_DATA.reservation || {};
+      const targetWa = (resData.waTarget || siteData.brand?.hotlineWa || '6285158515332').replace(/\D/g, '');
+
+      const text = `Halo Soto Kudus Kedai Taman, saya ingin mengajukan:\n\n` +
+        `👤 *Nama:* ${name}\n` +
+        `📱 *No WhatsApp:* ${phone}\n` +
+        `📋 *Keperluan:* ${type}\n` +
+        `📝 *Rincian / Tanggal:* ${message}\n\n` +
+        `Mohon konfirmasi ketersediaan tempat / pesanan. Terima kasih! 🌿`;
+
+      const waUrl = `https://wa.me/${targetWa}?text=${encodeURIComponent(text)}`;
+      
+      showToast(`Terima kasih ${name}, permohonan reservasi diteruskan ke WhatsApp! 🌿`);
       feedbackForm.reset();
+      setTimeout(() => {
+        window.open(waUrl, '_blank');
+      }, 700);
     });
   }
 }

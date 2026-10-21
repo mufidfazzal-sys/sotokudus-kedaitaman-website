@@ -223,22 +223,22 @@
 
           <div class="menu-category-tabs">
             <button class="category-tab-btn active" data-category="all">
-              ⭐ Semua Menu
+              ⭐ Semua Menu <span class="tab-count-badge">33</span>
             </button>
             <button class="category-tab-btn" data-category="soto">
-              🥣 Soto Kudus (SODUS)
+              🥣 Soto Kudus (SODUS) <span class="tab-count-badge">5</span>
             </button>
             <button class="category-tab-btn" data-category="lauk">
-              🍢 Sate & Lauk Pendamping
+              🍢 Sate & Lauk Pendamping <span class="tab-count-badge">10</span>
             </button>
             <button class="category-tab-btn" data-category="nusantara">
-              🍛 Masakan Nusantara
+              🍛 Masakan Nusantara <span class="tab-count-badge">7</span>
             </button>
             <button class="category-tab-btn" data-category="minuman">
-              🥤 Minuman & Jamu
+              🥤 Minuman & Jamu <span class="tab-count-badge">8</span>
             </button>
             <button class="category-tab-btn" data-category="katering">
-              🍱 Paket Katering
+              🍱 Paket Katering <span class="tab-count-badge">3</span>
             </button>
           </div>
         </div>
@@ -474,13 +474,17 @@
         </div>
 
         <!-- Feedback & Reservation Form Box -->
-        <div class="feedback-box">
-          <h3 style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-green-dark); text-align: center; margin-bottom: 6px;">
+        <div class="feedback-box" id="reservationSection">
+          <h3 id="reservationTitle" style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-green-dark); text-align: center; margin-bottom: 6px;">
             Reservasi Meja / Pesan Katering
           </h3>
-          <p style="text-align: center; color: var(--color-text-muted); font-size: 0.92rem; margin-bottom: 24px;">
+          <p id="reservationSubtitle" style="text-align: center; color: var(--color-text-muted); font-size: 0.92rem; margin-bottom: 20px;">
             Silakan kirimkan permohonan reservasi tempat atau pertanyaan seputar katering acara Anda:
           </p>
+
+          <div id="reservationNoticeBox" style="display: none; background: #fefce8; border: 1px dashed #eab308; padding: 10px 16px; border-radius: 8px; margin-bottom: 20px; font-size: 0.88rem; color: #854d0e; text-align: center;">
+            <span id="reservationNoticeText"></span>
+          </div>
 
           <form id="feedbackForm">
             <div class="form-grid">
@@ -506,7 +510,7 @@
               </div>
             </div>
 
-            <button type="submit" class="btn-primary" style="width: 100%;">
+            <button type="submit" id="reservationSubmitBtn" class="btn-primary" style="width: 100%;">
               Kirimkan Permohonan Sekarang 🌿
             </button>
           </form>

@@ -75,8 +75,489 @@ const DEFAULT_DATA = {
     bannerBtnText: "Klaim Voucher Diskon",
     popupImage: "images/menu/soto-kudus-campur.jpg"
   },
-  menus: [],
-  gallery: [],
+  reservation: {
+    enabled: true,
+    title: "Reservasi Meja / Pesan Katering",
+    subtitle: "Silakan kirimkan permohonan reservasi tempat atau pertanyaan seputar katering acara Anda:",
+    waTarget: "6285158515332",
+    buttonText: "Kirimkan Permohonan Sekarang 🌿",
+    notice: "Untuk reservasi rombongan atau paket syukuran keluarga di atas 10 orang disarankan konfirmasi H-1."
+  },
+  menus: [
+    {
+        "id": "soto-kudus-campur",
+        "name": "Soto Kudus Ayam Campur (Nasi Campur)",
+        "category": "soto",
+        "price": 18000,
+        "isAvailable": true,
+        "tag": "Bintang Utama ⭐",
+        "tagClass": "tag-star",
+        "desc": "Soto Kudus otentik dalam mangkuk porselen khas. Kuah kaldu ayam kampung bening gurih, suwiran ayam empuk, tauge segar renyah, seledri, dan taburan bawang putih goreng renyah langsung dicampur nasi.",
+        "image": "images/menu/soto-kudus-campur.jpg"
+    },
+    {
+        "id": "soto-kudus-pisah",
+        "name": "Soto Kudus Ayam Pisah (Nasi Terpisah)",
+        "category": "soto",
+        "price": 22000,
+        "isAvailable": true,
+        "tag": "Paling Populer 🍲",
+        "tagClass": "tag-favorit",
+        "desc": "Porsi kuah dan suwiran ayam kampung lebih melimpah disajikan terpisah dari sepiring nasi putih hangat bertabur bawang goreng wangi.",
+        "image": "images/menu/soto-kudus-pisah.jpg"
+    },
+    {
+        "id": "soto-kudus-daging-campur",
+        "name": "Soto Kudus Daging Sapi Campur",
+        "category": "soto",
+        "price": 24000,
+        "isAvailable": true,
+        "tag": "Daging Sapi Pilihan 🥩",
+        "tagClass": "tag-star",
+        "desc": "Cita rasa otentik Kudus dengan potongan daging sapi empuk gurih meresap, tauge renyah, kuah kaldu rempah harum, disajikan hangat langsung bersama nasi.",
+        "image": "images/menu/soto-kudus-daging-campur.jpg"
+    },
+    {
+        "id": "soto-kudus-daging-pisah",
+        "name": "Soto Kudus Daging Sapi Pisah",
+        "category": "soto",
+        "price": 28000,
+        "isAvailable": true,
+        "tag": "Favorit Gurih 🥩",
+        "tagClass": "tag-favorit",
+        "desc": "Semangkuk penuh kuah kaldu sapi kaya rempah dengan irisan daging sapi empuk lembut melimpah, disajikan terpisah dari nasi putih hangat.",
+        "image": "images/menu/soto-kudus-daging-pisah.jpg"
+    },
+    {
+        "id": "soto-kudus-spesial-komplit",
+        "name": "Soto Kudus Spesial Komplit Kedai Taman",
+        "category": "soto",
+        "price": 30000,
+        "isAvailable": true,
+        "tag": "Porsi Istimewa ⭐",
+        "tagClass": "tag-star",
+        "desc": "Porsi komplit istimewa: suwiran ayam kampung melimpah, telur bacem utuh, perkedel kentang lembut, dan taburan bawang putih goreng ekstra garing di kuah kaldu emas.",
+        "image": "images/menu/soto-kudus-spesial-komplit.jpg"
+    },
+    {
+        "id": "sate-telur-puyuh",
+        "name": "Sate Telur Puyuh Kecap Bacem",
+        "category": "lauk",
+        "price": 5000,
+        "isAvailable": true,
+        "tag": "Wajib Coba 🍢",
+        "tagClass": "tag-favorit",
+        "desc": "Telur puyuh pilihan dimasak bumbu bacem manis gurih meresap sampai ke kuning telur, jodoh sempurna kuah soto panas.",
+        "image": "images/menu/sate-telur-puyuh.jpg"
+    },
+    {
+        "id": "sate-ati-ampela",
+        "name": "Sate Ati Ampela Ungkep",
+        "category": "lauk",
+        "price": 5000,
+        "isAvailable": true,
+        "tag": "Gurih Legit 🍢",
+        "tagClass": "tag-favorit",
+        "desc": "Ati ampela ayam segar yang diungkep bumbu rempah gurih sedap, tanpa bau amis, empuk dan nikmat.",
+        "image": "images/menu/sate-ati-ampela.jpg"
+    },
+    {
+        "id": "sate-usus",
+        "name": "Sate Usus Bumbu Kuning",
+        "category": "lauk",
+        "price": 4000,
+        "isAvailable": true,
+        "tag": "Favorit Pelanggan 🍢",
+        "tagClass": "tag-favorit",
+        "desc": "Usus ayam bersih dimasak bumbu kuning tradisional dengan rasa gurih manis yang pas.",
+        "image": "images/menu/sate-usus.jpg"
+    },
+    {
+        "id": "sate-kerang",
+        "name": "Sate Kerang Bumbu Manis Gurih",
+        "category": "lauk",
+        "price": 5000,
+        "isAvailable": true,
+        "tag": "Khas Pesisir 🦪",
+        "tagClass": "tag-favorit",
+        "desc": "Kerang dara segar dimasak bumbu kecap rempah manis gurih khas pesisir Jawa Timur, bertekstur kenyal legit dan harum.",
+        "image": "images/menu/sate-kerang.jpg"
+    },
+    {
+        "id": "perkedel-kentang",
+        "name": "Perkedel Kentang Spesial",
+        "category": "lauk",
+        "price": 4000,
+        "isAvailable": true,
+        "tag": "Renyah Lembut 🥔",
+        "tagClass": "tag-favorit",
+        "desc": "Olahan kentang tumbuk lembut dengan bumbu rempah daun bawang dan balutan telur renyah.",
+        "image": "images/menu/perkedel-kentang.jpg"
+    },
+    {
+        "id": "tempe-tahu-bacem",
+        "name": "Tempe & Tahu Bacem Tradisional",
+        "category": "lauk",
+        "price": 4000,
+        "isAvailable": true,
+        "tag": "Manis Gurih 🥢",
+        "tagClass": "tag-favorit",
+        "desc": "Tempe dan tahu kedelai yang direbus perlahan dengan gula merah dan ketumbar wangi meresap.",
+        "image": "images/menu/tempe-tahu-bacem.jpg"
+    },
+    {
+        "id": "tempe-mendoan",
+        "name": "Tempe Mendoan Panas (Isi 3)",
+        "category": "lauk",
+        "price": 12000,
+        "isAvailable": true,
+        "tag": "Gorengan Hangat 🥢",
+        "tagClass": "tag-favorit",
+        "desc": "Tempe lebar berbalut adonan tepung daun bawang kucai yang digoreng hangat lembut gurih, disajikan lengkap dengan sambal kecap rawit pedas.",
+        "image": "images/menu/tempe-mendoan.jpg"
+    },
+    {
+        "id": "peyek-kacang",
+        "name": "Peyek Kacang Daun Jeruk Renyah",
+        "category": "lauk",
+        "price": 5000,
+        "isAvailable": true,
+        "tag": "Kriuk Gurih 🥜",
+        "tagClass": "tag-favorit",
+        "desc": "Rempeyek kacang tanah bertabur irisan daun jeruk purut wangi, super renyah dan gurih sebagai pelengkap santapan berkuah.",
+        "image": "images/menu/peyek-kacang.jpg"
+    },
+    {
+        "id": "kerupuk-kaleng",
+        "name": "Kerupuk Putih Kaleng Biru",
+        "category": "lauk",
+        "price": 2000,
+        "isAvailable": true,
+        "tag": "Klasik Kedai 🌾",
+        "tagClass": "tag-favorit",
+        "desc": "Kerupuk uyel putih bundar klasik khas warung soto, renyah gurih menggoda saat dicelup ke kuah soto hangat.",
+        "image": "images/menu/kerupuk-kaleng.jpg"
+    },
+    {
+        "id": "nasi-putih",
+        "name": "Nasi Putih Hangat Pulen",
+        "category": "lauk",
+        "price": 5000,
+        "isAvailable": true,
+        "tag": "Pulen Wangi 🍚",
+        "tagClass": "tag-favorit",
+        "desc": "Sepiring nasi putih beras pilihan yang pulen dan hangat, ditaburi bawang merah goreng harum.",
+        "image": "images/menu/nasi-putih.jpg"
+    },
+    {
+        "id": "nasi-sambal-ibu",
+        "name": "Nasi Sambal Ibu (Ayam Goreng)",
+        "category": "nusantara",
+        "price": 25000,
+        "isAvailable": true,
+        "tag": "Menu Andalan 🌶️",
+        "tagClass": "tag-nusantara",
+        "desc": "Menu viral khas Kedai Taman! Nasi putih dengan sambal ulek segar pedas nampol, ayam goreng gurih rempah, tahu, tempe, dan lalapan segar.",
+        "image": "images/menu/nasi-sambal-ibu.jpg"
+    },
+    {
+        "id": "tahu-gimbal",
+        "name": "Tahu Gimbal Khas Semarang",
+        "category": "nusantara",
+        "price": 22000,
+        "isAvailable": true,
+        "tag": "Khas Pesisir 🦐",
+        "tagClass": "tag-nusantara",
+        "desc": "Potongan tahu goreng panas, gimbal udang renyah kriuk, tauge segar, kol rajang disiram bumbu kacang petis legit yang sedap mantap.",
+        "image": "images/menu/tahu-gimbal.jpg"
+    },
+    {
+        "id": "mie-jogja",
+        "name": "Mie Jogja (Bakmi Jawa Godhog/Goreng)",
+        "category": "nusantara",
+        "price": 22000,
+        "isAvailable": true,
+        "tag": "Aroma Gurih 🍜",
+        "tagClass": "tag-nusantara",
+        "desc": "Bakmi kuning khas tradisional Yogyakarta dimasak dengan telur bebek, suwiran ayam, kubis, dan kaldu gurih beraroma arang.",
+        "image": "images/menu/mie-jogja.jpg"
+    },
+    {
+        "id": "iga-penyet",
+        "name": "Iga Sapi Penyet Sambal Bawang",
+        "category": "nusantara",
+        "price": 35000,
+        "isAvailable": true,
+        "tag": "Menu Sultan 🥩",
+        "tagClass": "tag-nusantara",
+        "desc": "Potongan iga sapi tebal empuk yang digoreng garing lalu dipenyet di atas cobek sambal bawang pedas semerbak.",
+        "image": "images/menu/iga-penyet.jpg"
+    },
+    {
+        "id": "ayam-kremes",
+        "name": "Ayam Goreng Kremes Kedai Taman",
+        "category": "nusantara",
+        "price": 24000,
+        "isAvailable": true,
+        "tag": "Kriuk Gurih 🍗",
+        "tagClass": "tag-nusantara",
+        "desc": "Ayam ungkep rempah disajikan dengan taburan kremesan sarang burung yang renyah gurih tahan lama.",
+        "image": "images/menu/ayam-kremes.jpg"
+    },
+    {
+        "id": "rawon-surabaya",
+        "name": "Rawon Daging Sapi Khas Surabaya",
+        "category": "nusantara",
+        "price": 28000,
+        "isAvailable": true,
+        "tag": "Khas Jatim 🍲",
+        "tagClass": "tag-nusantara",
+        "desc": "Kuah rawon hitam pekat kaya rempah kluwek pilihan, potongan daging sapi empuk, tauge pendek renyah, dan sambal terasi gurih.",
+        "image": "images/menu/rawon-surabaya.jpg"
+    },
+    {
+        "id": "nasi-goreng-jawa",
+        "name": "Nasi Goreng Jawa Tradisional",
+        "category": "nusantara",
+        "price": 23000,
+        "isAvailable": true,
+        "tag": "Resep Klasik 🍳",
+        "tagClass": "tag-nusantara",
+        "desc": "Nasi goreng racikan bumbu khas Jawa beraroma smokey gurih, dilengkapi telur orak-arik, suwiran ayam kampung, kerupuk, dan acar segar.",
+        "image": "images/menu/nasi-goreng-jawa.jpg"
+    },
+    {
+        "id": "es-teh-manis",
+        "name": "Es Teh Manis Melati",
+        "category": "minuman",
+        "price": 5000,
+        "isAvailable": true,
+        "tag": "Pelepas Dahaga 🥤",
+        "tagClass": "tag-drink",
+        "desc": "Teh melati wangi khas Jawa diseduh tradisional dengan es batu dingin menyegarkan.",
+        "image": "images/menu/es-teh-manis.jpg"
+    },
+    {
+        "id": "es-jeruk",
+        "name": "Es Jeruk Peras Segar",
+        "category": "minuman",
+        "price": 8000,
+        "isAvailable": true,
+        "tag": "Jeruk Murni 🍊",
+        "tagClass": "tag-drink",
+        "desc": "Perasan air jeruk manis alami segar dengan gula pasir murni dan es batu dingin.",
+        "image": "images/menu/es-jeruk.jpg"
+    },
+    {
+        "id": "wedang-uwuh",
+        "name": "Wedang Uwuh Rempah Imogiri",
+        "category": "minuman",
+        "price": 10000,
+        "isAvailable": true,
+        "tag": "Hangat Sehat 🌿",
+        "tagClass": "tag-drink",
+        "desc": "Minuman rempah herbal berkhasiat dengan kayu secang, jahe bakar, cengkeh, kayu manis, dan gula batu.",
+        "image": "images/menu/wedang-uwuh.jpg"
+    },
+    {
+        "id": "beras-kencur",
+        "name": "Jamu Beras Kencur Tradisional",
+        "category": "minuman",
+        "price": 10000,
+        "isAvailable": true,
+        "tag": "Jamu Alami 🌾",
+        "tagClass": "tag-drink",
+        "desc": "Ramuan tradisional beras kencur segar penghangat tubuh dan penambah nafsu makan.",
+        "image": "images/menu/beras-kencur.jpg"
+    },
+    {
+        "id": "kopi-susu-kedai-taman",
+        "name": "Es Kopi Susu Gula Aren Kedai Taman",
+        "category": "minuman",
+        "price": 15000,
+        "isAvailable": true,
+        "tag": "Racikan Kopi ☕",
+        "tagClass": "tag-drink",
+        "desc": "Espresso blend pilihan dipadu susu creamy dan manis legit gula aren murni.",
+        "image": "images/menu/kopi-susu-kedai-taman.jpg"
+    },
+    {
+        "id": "es-sinom",
+        "name": "Es Sinom Khas Surabaya Segar",
+        "category": "minuman",
+        "price": 8000,
+        "isAvailable": true,
+        "tag": "Segar Alami 🍃",
+        "tagClass": "tag-drink",
+        "desc": "Minuman herbal segar daun asam muda (sinom) dan kunyit asam asli Jawa Timur dengan gula aren alami, sangat sejuk di tenggorokan.",
+        "image": "images/menu/es-sinom.jpg"
+    },
+    {
+        "id": "es-degan-jeruk",
+        "name": "Es Degan Kelapa Muda Jeruk",
+        "category": "minuman",
+        "price": 12000,
+        "isAvailable": true,
+        "tag": "Favorit Siang 🥥",
+        "tagClass": "tag-drink",
+        "desc": "Air kelapa muda murni segar dengan serutan daging kelapa lembut dipadu kesegaran perasan jeruk nipis alami.",
+        "image": "images/menu/es-degan-jeruk.jpg"
+    },
+    {
+        "id": "wedang-jahe-sereh",
+        "name": "Wedang Jahe Sereh Hangat Gula Batu",
+        "category": "minuman",
+        "price": 9000,
+        "isAvailable": true,
+        "tag": "Penghangat Tubuh 🫖",
+        "tagClass": "tag-drink",
+        "desc": "Geprekan jahe merah bakar dan batang sereh wangi diseduh air panas dengan pemanis gula batu alami.",
+        "image": "images/menu/wedang-jahe-sereh.jpg"
+    },
+    {
+        "id": "tumpeng-nasi-kotak",
+        "name": "Paket Nasi Kotak & Tumpeng Acara",
+        "category": "katering",
+        "price": 25000,
+        "isAvailable": true,
+        "tag": "Catering & Event 🍱",
+        "tagClass": "tag-star",
+        "desc": "Menerima pesanan nasi kotak syukuran, tumpeng mini maupun tumpeng besar untuk acara kantor, arisan, pengajian dan syukuran keluarga.",
+        "image": "images/menu/tumpeng-nasi-kotak.jpg"
+    },
+    {
+        "id": "paket-sarapan-box",
+        "name": "Paket Sarapan Box Soto Kudus (Min. 5 Box)",
+        "category": "katering",
+        "price": 22000,
+        "isAvailable": true,
+        "tag": "Sarapan Kantor 🍱",
+        "tagClass": "tag-favorit",
+        "desc": "Box sarapan praktis berisi mangkuk ramah lingkungan Soto Kudus Ayam, nasi putih terpisah, sate telur puyuh, perkedel kentang, dan kerupuk.",
+        "image": "images/menu/paket-sarapan-box.jpg"
+    },
+    {
+        "id": "paket-prasmanan",
+        "name": "Paket Prasmanan Soto Kudus (Min. 30 Pax)",
+        "category": "katering",
+        "price": 45000,
+        "isAvailable": true,
+        "tag": "Jamuan Lengkap 🍽️",
+        "tagClass": "tag-star",
+        "desc": "Layanan prasmanan live-cooking lengkap dengan stall Soto Kudus panas, aneka sate bacem komplit, lauk nusantara, es teh/es jeruk, dan waiter profesional.",
+        "image": "images/menu/paket-prasmanan.jpg"
+    }
+],
+  gallery: [
+    {
+        "id": "galeri-1",
+        "title": "Soto Kudus Mangkuk Tradisional",
+        "category": "Makanan",
+        "badge": "Menu Khas",
+        "tag": "#sotokudus #ayamkampung",
+        "desc": "Kuah kaldu ayam kampung bening gurih kekuningan dengan taburan bawang putih goreng renyah dan perasan jeruk limau segar.",
+        "image": "images/galeri/galeri-1-soto-kudus-hangat.jpg"
+    },
+    {
+        "id": "galeri-2",
+        "title": "Deretan Sate Bacem & Lauk Pendamping",
+        "category": "Lauk",
+        "badge": "Lauk Pendamping",
+        "tag": "#satepuyuh #baceman",
+        "desc": "Sate telur puyuh kecap, sate ati ampela, sate usus, dan perkedel kentang yang selalu siap menemani semangkuk soto Anda.",
+        "image": "images/galeri/galeri-2-sate-puyuh-lauk.jpg"
+    },
+    {
+        "id": "galeri-3",
+        "title": "Suasana Rindang Kedai Taman",
+        "category": "Suasana",
+        "badge": "Suasana Taman",
+        "tag": "#kedaitaman #surabayaasri",
+        "desc": "Tempat makan yang asri dengan pepohonan hijau, udara sejuk, dan suasana ramah keluarga di Gayungsari Surabaya.",
+        "image": "images/galeri/galeri-3-suasana-kedai-taman.jpg"
+    },
+    {
+        "id": "galeri-4",
+        "title": "Tahu Gimbal Khas Semarang",
+        "category": "Makanan",
+        "badge": "Kuliner Pesisir",
+        "tag": "#tahugimbal #semarang",
+        "desc": "Tahu goreng hangat dengan gimbal udang renyah, kubis segar, tauge, dan siraman bumbu kacang petis yang medok sedap.",
+        "image": "images/galeri/galeri-4-tahu-gimbal-semarang.jpg"
+    },
+    {
+        "id": "galeri-5",
+        "title": "Penyajian Hangat & Higienis",
+        "category": "Suasana",
+        "badge": "Higienis & Otentik",
+        "tag": "#resepwarisan #kudus",
+        "desc": "Setiap hidangan disajikan dengan standar kebersihan tinggi dan bumbu rempah racikan khas nusantara.",
+        "image": "images/galeri/galeri-5-penyajian-khas.jpg"
+    },
+    {
+        "id": "galeri-6",
+        "title": "Minuman Tradisional & Kopi Susu",
+        "category": "Minuman",
+        "badge": "Segar & Berkhasiat",
+        "tag": "#wedanguwuh #kopisusu",
+        "desc": "Pilihan wedang uwuh hangat, jamu beras kencur, es jeruk peras alami, hingga es kopi susu gula aren.",
+        "image": "images/galeri/galeri-6-minuman-tradisional.jpg"
+    },
+    {
+        "id": "galeri-7",
+        "title": "Soto Kudus Daging Sapi Kuah Rempah",
+        "category": "Makanan",
+        "badge": "Menu Istimewa",
+        "tag": "#sotodagingsapi #rempah",
+        "desc": "Potongan daging sapi empuk dengan kuah kaldu rempah harum yang disajikan terpisah bersama nasi hangat.",
+        "image": "images/galeri/galeri-7-soto-daging-rempah.jpg"
+    },
+    {
+        "id": "galeri-8",
+        "title": "Tempe Mendoan Panas & Sambal Kecap",
+        "category": "Lauk",
+        "badge": "Gorengan Panas",
+        "tag": "#mendoan #kucai",
+        "desc": "Tempe mendoan lembut berbalut tepung daun bawang wangi disajikan segar mendidih dari wajan bersama kecap rawit pedas.",
+        "image": "images/galeri/galeri-8-mendoan-panas.jpg"
+    },
+    {
+        "id": "galeri-9",
+        "title": "Iga Sapi Penyet Cobek Sambal Bawang",
+        "category": "Makanan",
+        "badge": "Menu Sultan",
+        "tag": "#igapenyet #pedasnampol",
+        "desc": "Iga sapi bakar penyet empuk gurih dengan limpahan sambal bawang segar yang menggugah selera santap siang.",
+        "image": "images/galeri/galeri-9-iga-penyet-sambal.jpg"
+    },
+    {
+        "id": "galeri-10",
+        "title": "Wedang Rempah Uwuh & Jamu Herbal",
+        "category": "Minuman",
+        "badge": "Hangat Sehat",
+        "tag": "#wedanguwuh #jamuherbal",
+        "desc": "Racikan dedaunan dan rempah kayu secang, jahe bakar geprek, cengkeh wangi dengan manis batu murni.",
+        "image": "images/galeri/galeri-10-wedang-rempah.jpg"
+    },
+    {
+        "id": "galeri-11",
+        "title": "Paket Tumpeng & Nasi Kotak Syukuran",
+        "category": "Katering",
+        "badge": "Pesanan Acara",
+        "tag": "#tumpengsurabaya #nasikotak",
+        "desc": "Penyajian tumpeng kuning komplit dan nasi kotak higienis untuk berbagai acara keluarga, syukuran kantor, dan arisan.",
+        "image": "images/galeri/galeri-11-tumpeng-syukuran.jpg"
+    },
+    {
+        "id": "galeri-12",
+        "title": "Area Santap Keluarga Semi-Outdoor Rindang",
+        "category": "Suasana",
+        "badge": "Ramah Keluarga",
+        "tag": "#tamanrindang #gayungan",
+        "desc": "Suasana santap nyaman semi-outdoor di bawah keteduhan pepohonan hijau, fasilitas musholla dan parkir luas.",
+        "image": "images/galeri/galeri-12-area-santap-taman.jpg"
+    }
+],
   settings: {
     adminPassword: "sodus123"
   }
@@ -84,6 +565,9 @@ const DEFAULT_DATA = {
 
 let siteData = JSON.parse(JSON.stringify(DEFAULT_DATA));
 let currentMenuFilter = '';
+let currentAdminCategory = 'all';
+let currentGalleryFilter = '';
+let currentGalleryCat = 'all';
 
 // ==========================================
 // 1. AUTHENTICATION & SESSION
@@ -142,7 +626,19 @@ async function loadAdminData() {
   const cached = localStorage.getItem('sodus_website_data');
   if (cached) {
     try {
-      siteData = JSON.parse(cached);
+      const parsed = JSON.parse(cached);
+      if (parsed) {
+        if (!parsed.menus || parsed.menus.length < DEFAULT_DATA.menus.length) {
+          parsed.menus = DEFAULT_DATA.menus;
+        }
+        if (!parsed.gallery || parsed.gallery.length < DEFAULT_DATA.gallery.length) {
+          parsed.gallery = DEFAULT_DATA.gallery;
+        }
+        if (!parsed.reservation) {
+          parsed.reservation = DEFAULT_DATA.reservation;
+        }
+        siteData = { ...siteData, ...parsed };
+      }
     } catch (e) {
       console.warn('Error reading localStorage:', e);
     }
@@ -178,6 +674,7 @@ async function loadAdminData() {
   populateLocationForm();
   populateContactForm();
   populatePromoForm();
+  populateReservationForm();
 
   // Top nav logo
   const navLogo = document.getElementById('topNavLogo');
@@ -209,10 +706,45 @@ async function saveAdminData(msg = 'Perubahan data berhasil disimpan!') {
   updateDashboardStats();
 }
 
+function updateAdminCategoryCounts() {
+  const menus = siteData.menus || DEFAULT_DATA.menus || [];
+  const counts = {
+    all: menus.length,
+    soto: menus.filter(m => m.category === 'soto').length,
+    lauk: menus.filter(m => m.category === 'lauk').length,
+    nusantara: menus.filter(m => m.category === 'nusantara').length,
+    minuman: menus.filter(m => m.category === 'minuman').length,
+    katering: menus.filter(m => m.category === 'katering').length
+  };
+
+  for (const [cat, count] of Object.entries(counts)) {
+    const el = document.getElementById(`adminCatCount_${cat}`);
+    if (el) el.textContent = count;
+  }
+}
+
+function updateAdminGalleryCounts() {
+  const gallery = siteData.gallery || DEFAULT_DATA.gallery || [];
+  const counts = {
+    all: gallery.length,
+    Makanan: gallery.filter(g => g.category === 'Makanan').length,
+    Lauk: gallery.filter(g => g.category === 'Lauk').length,
+    Suasana: gallery.filter(g => g.category === 'Suasana').length,
+    Minuman: gallery.filter(g => g.category === 'Minuman').length,
+    Katering: gallery.filter(g => g.category === 'Katering').length
+  };
+
+  for (const [cat, count] of Object.entries(counts)) {
+    const el = document.getElementById(`adminGalCount_${cat}`);
+    if (el) el.textContent = count;
+  }
+}
+
 function updateDashboardStats() {
-  const menus = siteData.menus || [];
+  const menus = siteData.menus || DEFAULT_DATA.menus || [];
   const gallery = siteData.gallery || [];
   const promo = siteData.promo || {};
+  const resv = siteData.reservation || DEFAULT_DATA.reservation || { enabled: true };
 
   const totalMenuEl = document.getElementById('statTotalMenu');
   if (totalMenuEl) totalMenuEl.textContent = menus.length;
@@ -223,8 +755,12 @@ function updateDashboardStats() {
     availMenuEl.textContent = `${availCount} / ${menus.length}`;
   }
 
+  updateAdminCategoryCounts();
+
   const totalGalEl = document.getElementById('statTotalGallery');
   if (totalGalEl) totalGalEl.textContent = gallery.length;
+
+  updateAdminGalleryCounts();
 
   const promoStatusEl = document.getElementById('statPromoStatus');
   if (promoStatusEl) {
@@ -234,6 +770,17 @@ function updateDashboardStats() {
     } else {
       promoStatusEl.textContent = 'NONAKTIF';
       promoStatusEl.style.color = '#dc2626';
+    }
+  }
+
+  const resvStatusEl = document.getElementById('statReservationStatus');
+  if (resvStatusEl) {
+    if (resv.enabled !== false) {
+      resvStatusEl.textContent = 'AKTIF';
+      resvStatusEl.style.color = '#15803d';
+    } else {
+      resvStatusEl.textContent = 'NONAKTIF';
+      resvStatusEl.style.color = '#dc2626';
     }
   }
 }
@@ -265,33 +812,46 @@ function renderAdminMenuTable() {
   const tbody = document.getElementById('adminMenuTableBody');
   if (!tbody) return;
 
-  const menus = siteData.menus || [];
+  const menus = siteData.menus || DEFAULT_DATA.menus || [];
   const query = currentMenuFilter.toLowerCase().trim();
 
   const filtered = menus.filter(m => {
-    return !query || 
+    const matchCat = (currentAdminCategory === 'all' || m.category === currentAdminCategory);
+    const matchSearch = (!query || 
       m.name.toLowerCase().includes(query) || 
       (m.category && m.category.toLowerCase().includes(query)) ||
-      (m.tag && m.tag.toLowerCase().includes(query));
+      (m.tag && m.tag.toLowerCase().includes(query)) ||
+      (m.desc && m.desc.toLowerCase().includes(query))
+    );
+    return matchCat && matchSearch;
   });
 
   if (filtered.length === 0) {
     tbody.innerHTML = `
       <tr>
         <td colspan="7" style="text-align: center; padding: 36px; color: var(--color-text-muted);">
-          Tidak ada menu yang ditemukan.
+          Tidak ada menu yang ditemukan${currentAdminCategory !== 'all' ? ` di kategori "${currentAdminCategory}"` : ''}.
         </td>
       </tr>
     `;
     return;
   }
 
+  const categoryBadges = {
+    soto: '<span class="badge-cat badge-cat-soto">🥣 Soto Kudus</span>',
+    lauk: '<span class="badge-cat badge-cat-lauk">🍢 Sate & Lauk</span>',
+    nusantara: '<span class="badge-cat badge-cat-nusantara">🍛 Nusantara</span>',
+    minuman: '<span class="badge-cat badge-cat-minuman">🥤 Minuman</span>',
+    katering: '<span class="badge-cat badge-cat-katering">🍱 Katering</span>'
+  };
+
   tbody.innerHTML = filtered.map(item => {
     const isAvail = (item.isAvailable !== false);
+    const catBadge = categoryBadges[item.category] || `<span class="badge-cat">${item.category}</span>`;
     return `
       <tr>
         <td>
-          <img src="${item.image || 'images/menu/soto-kudus-campur.jpg'}" alt="${item.name}" class="table-thumb" />
+          <img src="${item.image || 'images/menu/soto-kudus-campur.jpg'}" alt="${item.name}" class="table-thumb" onerror="this.onerror=null; this.src='images/menu/soto-kudus-campur.jpg';" />
         </td>
         <td>
           <div style="font-weight: 700; color: var(--color-green-dark);">${item.name}</div>
@@ -300,15 +860,13 @@ function renderAdminMenuTable() {
           </div>
         </td>
         <td>
-          <span style="font-size: 0.82rem; font-weight: 700; color: var(--color-text-muted); text-transform: uppercase;">
-            ${item.category}
-          </span>
+          ${catBadge}
         </td>
-        <td style="font-weight: 700; color: #15803d;">
+        <td style="font-weight: 700; color: #15803d; font-family: var(--font-serif); font-size: 1.05rem;">
           ${formatRupiah(item.price)}
         </td>
         <td>
-          ${item.tag ? `<span class="badge-status" style="background:#fef3c7; color:#b45309;">${item.tag}</span>` : '-'}
+          ${item.tag ? `<span class="badge-status" style="background:#fef3c7; color:#b45309; font-weight:700;">${item.tag}</span>` : '-'}
         </td>
         <td>
           <label class="switch-label">
@@ -346,6 +904,27 @@ function initMenuEvents() {
     addBtn.addEventListener('click', () => openAddMenuModal());
   }
 
+  // Category filter pills in Admin
+  const catPills = document.querySelectorAll('.admin-cat-pill');
+  catPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      catPills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      currentAdminCategory = pill.getAttribute('data-cat') || 'all';
+      renderAdminMenuTable();
+    });
+  });
+
+  // Sync with default 33 menus button
+  const syncBtn = document.getElementById('btnSyncDefaultMenus');
+  if (syncBtn) {
+    syncBtn.addEventListener('click', () => {
+      if (confirm('Sinkronkan seluruh menu admin dengan 33 daftar menu standar terbaru?')) {
+        syncDefaultMenus();
+      }
+    });
+  }
+
   // Menu Modal Form Submit
   const menuForm = document.getElementById('menuForm');
   if (menuForm) {
@@ -379,6 +958,13 @@ function initMenuEvents() {
       }
     });
   }
+}
+
+async function syncDefaultMenus() {
+  siteData.menus = JSON.parse(JSON.stringify(DEFAULT_DATA.menus));
+  await saveAdminData('Seluruh 33 menu berhasil disinkronkan ke daftar standar!');
+  renderAdminMenuTable();
+  updateDashboardStats();
 }
 
 function toggleMenuAvailability(menuId, isAvail) {
@@ -613,50 +1199,105 @@ function renderAdminGalleryTable() {
   const tbody = document.getElementById('adminGalleryTableBody');
   if (!tbody) return;
 
-  const gallery = siteData.gallery || [];
-  if (gallery.length === 0) {
+  const gallery = siteData.gallery || DEFAULT_DATA.gallery || [];
+  const query = currentGalleryFilter.toLowerCase().trim();
+
+  const filtered = gallery.filter(item => {
+    const matchCat = (currentGalleryCat === 'all' || item.category === currentGalleryCat);
+    const matchSearch = (!query || 
+      item.title.toLowerCase().includes(query) || 
+      (item.category && item.category.toLowerCase().includes(query)) ||
+      (item.badge && item.badge.toLowerCase().includes(query)) ||
+      (item.tag && item.tag.toLowerCase().includes(query)) ||
+      (item.desc && item.desc.toLowerCase().includes(query))
+    );
+    return matchCat && matchSearch;
+  });
+
+  if (filtered.length === 0) {
     tbody.innerHTML = `
       <tr>
-        <td colspan="5" style="text-align: center; padding: 36px; color: var(--color-text-muted);">
-          Belum ada foto galeri.
+        <td colspan="6" style="text-align: center; padding: 36px; color: var(--color-text-muted);">
+          Tidak ada foto galeri yang ditemukan${currentGalleryCat !== 'all' ? ` di kategori "${currentGalleryCat}"` : ''}.
         </td>
       </tr>
     `;
     return;
   }
 
-  tbody.innerHTML = gallery.map(item => `
-    <tr>
-      <td>
-        <img src="${item.image}" alt="${item.title}" class="table-thumb" style="width: 72px; height: 50px;" />
-      </td>
-      <td style="font-weight: 700; color: var(--color-green-dark);">
-        ${item.title}
-      </td>
-      <td>
-        <span class="badge-status" style="background:#dcfce7; color:#15803d;">
-          ${item.badge || item.category || 'Galeri'}
-        </span>
-      </td>
-      <td style="font-size: 0.82rem; color: var(--color-text-muted); max-width: 300px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-        ${item.desc || '-'}
-      </td>
-      <td style="text-align: right; white-space: nowrap;">
-        <button class="btn-admin btn-secondary" onclick="openEditGalleryModal('${item.id}')" style="padding: 6px 12px; font-size: 0.8rem;">
-          ✏️ Edit
-        </button>
-        <button class="btn-admin btn-danger" onclick="deleteGallery('${item.id}')" style="padding: 6px 12px; font-size: 0.8rem; margin-left: 6px;">
-          🗑️ Hapus
-        </button>
-      </td>
-    </tr>
-  `).join('');
+  const catBadges = {
+    'Makanan': '<span class="badge-cat badge-cat-soto">🍲 Makanan</span>',
+    'Lauk': '<span class="badge-cat badge-cat-lauk">🍢 Lauk</span>',
+    'Suasana': '<span class="badge-cat badge-cat-suasana">🌿 Suasana</span>',
+    'Minuman': '<span class="badge-cat badge-cat-minuman">🥤 Minuman</span>',
+    'Katering': '<span class="badge-cat badge-cat-katering">🍱 Katering</span>'
+  };
+
+  tbody.innerHTML = filtered.map(item => {
+    const catBadge = catBadges[item.category] || `<span class="badge-cat">${item.category || 'Galeri'}</span>`;
+    return `
+      <tr>
+        <td>
+          <img src="${item.image}" alt="${item.title}" class="table-thumb" style="width: 76px; height: 54px; object-fit: cover; border-radius: 8px; box-shadow: var(--shadow-sm);" onerror="this.onerror=null; this.src='images/galeri/galeri-1-soto-kudus-hangat.jpg';" />
+        </td>
+        <td>
+          <div style="font-weight: 700; color: var(--color-green-dark); font-size: 0.95rem;">${item.title}</div>
+          <div style="font-size: 0.78rem; color: var(--color-text-muted); margin-top: 2px;">${item.tag || ''}</div>
+        </td>
+        <td>
+          ${catBadge}
+        </td>
+        <td>
+          ${item.badge ? `<span class="badge-status" style="background:#fef3c7; color:#b45309; font-weight:700;">${item.badge}</span>` : '-'}
+        </td>
+        <td style="font-size: 0.82rem; color: var(--color-text-muted); max-width: 280px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+          ${item.desc || '-'}
+        </td>
+        <td style="text-align: right; white-space: nowrap;">
+          <button class="btn-admin btn-secondary" onclick="openEditGalleryModal('${item.id}')" style="padding: 6px 12px; font-size: 0.8rem;">
+            ✏️ Edit
+          </button>
+          <button class="btn-admin btn-danger" onclick="deleteGallery('${item.id}')" style="padding: 6px 12px; font-size: 0.8rem; margin-left: 6px;">
+            🗑️ Hapus
+          </button>
+        </td>
+      </tr>
+    `;
+  }).join('');
 }
 
 function initGalleryEvents() {
+  const search = document.getElementById('adminGallerySearch');
+  if (search) {
+    search.addEventListener('input', (e) => {
+      currentGalleryFilter = e.target.value;
+      renderAdminGalleryTable();
+    });
+  }
+
   const addBtn = document.getElementById('btnOpenAddGallery');
   if (addBtn) {
     addBtn.addEventListener('click', () => openAddGalleryModal());
+  }
+
+  // Category filter pills in Gallery
+  const galPills = document.querySelectorAll('.admin-gal-pill');
+  galPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      galPills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      currentGalleryCat = pill.getAttribute('data-gal-cat') || 'all';
+      renderAdminGalleryTable();
+    });
+  });
+
+  const syncGalBtn = document.getElementById('btnSyncDefaultGallery');
+  if (syncGalBtn) {
+    syncGalBtn.addEventListener('click', () => {
+      if (confirm('Sinkronkan seluruh galeri admin dengan 12 foto galeri standar terbaru?')) {
+        syncDefaultGallery();
+      }
+    });
   }
 
   const galForm = document.getElementById('galleryForm');
@@ -690,6 +1331,13 @@ function initGalleryEvents() {
   }
 }
 
+async function syncDefaultGallery() {
+  siteData.gallery = JSON.parse(JSON.stringify(DEFAULT_DATA.gallery));
+  await saveAdminData('Seluruh 12 foto galeri standar berhasil disinkronkan!');
+  renderAdminGalleryTable();
+  updateDashboardStats();
+}
+
 function openAddGalleryModal() {
   const modal = document.getElementById('galleryModal');
   const title = document.getElementById('galleryModalTitle');
@@ -699,7 +1347,11 @@ function openAddGalleryModal() {
   if (editId) editId.value = '';
 
   document.getElementById('galleryTitleInput').value = '';
-  document.getElementById('galleryBadgeInput').value = 'Suasana Taman';
+  const catSel = document.getElementById('galleryCategorySelect');
+  if (catSel) catSel.value = 'Makanan';
+  document.getElementById('galleryBadgeInput').value = 'Menu Khas';
+  const tagInput = document.getElementById('galleryTagInput');
+  if (tagInput) tagInput.value = '#sotokudus #kedaitaman';
   document.getElementById('galleryDescInput').value = '';
   document.getElementById('galleryImageInput').value = 'images/galeri/galeri-1-soto-kudus-hangat.jpg';
   document.getElementById('galleryImagePreview').src = 'images/galeri/galeri-1-soto-kudus-hangat.jpg';
@@ -719,7 +1371,11 @@ function openEditGalleryModal(galId) {
   if (editId) editId.value = item.id;
 
   document.getElementById('galleryTitleInput').value = item.title || '';
-  document.getElementById('galleryBadgeInput').value = item.badge || item.category || '';
+  const catSel = document.getElementById('galleryCategorySelect');
+  if (catSel) catSel.value = item.category || 'Makanan';
+  document.getElementById('galleryBadgeInput').value = item.badge || '';
+  const tagInput = document.getElementById('galleryTagInput');
+  if (tagInput) tagInput.value = item.tag || '';
   document.getElementById('galleryDescInput').value = item.desc || '';
   document.getElementById('galleryImageInput').value = item.image || '';
   document.getElementById('galleryImagePreview').src = item.image || 'images/galeri/galeri-1-soto-kudus-hangat.jpg';
@@ -735,7 +1391,11 @@ function closeGalleryModal() {
 function saveGalleryFromModal() {
   const editId = document.getElementById('galleryEditId').value.trim();
   const title = document.getElementById('galleryTitleInput').value.trim();
-  const badge = document.getElementById('galleryBadgeInput').value.trim() || 'Galeri';
+  const catSel = document.getElementById('galleryCategorySelect');
+  const category = catSel ? catSel.value : 'Makanan';
+  const badge = document.getElementById('galleryBadgeInput').value.trim() || 'Menu Khas';
+  const tagInput = document.getElementById('galleryTagInput');
+  const tag = tagInput ? tagInput.value.trim() : '#sotokudus #kedaitaman';
   const desc = document.getElementById('galleryDescInput').value.trim();
   const image = document.getElementById('galleryImageInput').value.trim();
 
@@ -750,8 +1410,9 @@ function saveGalleryFromModal() {
       siteData.gallery[idx] = {
         ...siteData.gallery[idx],
         title,
+        category,
         badge,
-        category: badge,
+        tag,
         desc,
         image
       };
@@ -761,9 +1422,9 @@ function saveGalleryFromModal() {
     siteData.gallery.push({
       id: newId,
       title,
+      category,
       badge,
-      category: badge,
-      tag: '#sotokudus #kedaitaman',
+      tag,
       desc,
       image
     });
@@ -962,6 +1623,125 @@ function initPromoEvents() {
 }
 
 // ==========================================
+// 9B. TAB: PENGATURAN KOLOM RESERVASI
+// ==========================================
+function populateReservationForm() {
+  const resv = siteData.reservation || DEFAULT_DATA.reservation || { enabled: true };
+
+  const check = document.getElementById('reservationEnabledCheck');
+  const badge = document.getElementById('reservationStatusBadge');
+  const isEnabled = (resv.enabled !== false);
+
+  if (check) check.checked = isEnabled;
+  if (badge) {
+    badge.textContent = isEnabled ? 'MENYALA (ON)' : 'DIMATIKAN (OFF)';
+    badge.style.color = isEnabled ? '#15803d' : '#dc2626';
+  }
+
+  const titleIn = document.getElementById('resTitleInput');
+  if (titleIn) titleIn.value = resv.title || 'Reservasi Meja / Pesan Katering';
+
+  const subIn = document.getElementById('resSubtitleInput');
+  if (subIn) subIn.value = resv.subtitle || 'Silakan kirimkan permohonan reservasi tempat atau pertanyaan seputar katering acara Anda:';
+
+  const waIn = document.getElementById('resWaInput');
+  if (waIn) waIn.value = resv.waTarget || '6285158515332';
+
+  const btnTextIn = document.getElementById('resButtonTextInput');
+  if (btnTextIn) btnTextIn.value = resv.buttonText || 'Kirimkan Permohonan Sekarang 🌿';
+
+  const noticeIn = document.getElementById('resNoticeInput');
+  if (noticeIn) noticeIn.value = resv.notice || 'Untuk reservasi rombongan atau paket syukuran keluarga di atas 10 orang disarankan konfirmasi H-1.';
+
+  updateReservationPreview();
+}
+
+function updateReservationPreview() {
+  const check = document.getElementById('reservationEnabledCheck');
+  const isEnabled = check ? check.checked : true;
+  const titleVal = document.getElementById('resTitleInput')?.value || 'Reservasi Meja / Pesan Katering';
+  const subVal = document.getElementById('resSubtitleInput')?.value || '';
+  const noticeVal = document.getElementById('resNoticeInput')?.value || '';
+
+  const prevTitle = document.getElementById('previewResTitle');
+  if (prevTitle) prevTitle.textContent = titleVal;
+
+  const prevSub = document.getElementById('previewResSub');
+  if (prevSub) prevSub.textContent = subVal;
+
+  const prevNotice = document.getElementById('previewResNotice');
+  if (prevNotice) {
+    if (noticeVal.trim()) {
+      prevNotice.textContent = 'Catatan: ' + noticeVal.trim();
+      prevNotice.style.display = 'block';
+    } else {
+      prevNotice.style.display = 'none';
+    }
+  }
+
+  const prevStatus = document.getElementById('previewResStatus');
+  const card = document.getElementById('reservationPreviewCard');
+  if (prevStatus) {
+    if (isEnabled) {
+      prevStatus.innerHTML = '🟢 Status: Kolom Reservasi <strong>Aktif & Muncul di Website</strong>';
+      prevStatus.style.color = '#15803d';
+      if (card) {
+        card.style.opacity = '1';
+        card.style.borderColor = 'var(--color-green-primary)';
+      }
+    } else {
+      prevStatus.innerHTML = '🔴 Status: Kolom Reservasi <strong>Dimatikan (Sembunyi dari Website)</strong>';
+      prevStatus.style.color = '#dc2626';
+      if (card) {
+        card.style.opacity = '0.65';
+        card.style.borderColor = '#dc2626';
+      }
+    }
+  }
+}
+
+function initReservationEvents() {
+  const check = document.getElementById('reservationEnabledCheck');
+  const badge = document.getElementById('reservationStatusBadge');
+
+  if (check) {
+    check.addEventListener('change', () => {
+      const isEnabled = check.checked;
+      if (badge) {
+        badge.textContent = isEnabled ? 'MENYALA (ON)' : 'DIMATIKAN (OFF)';
+        badge.style.color = isEnabled ? '#15803d' : '#dc2626';
+      }
+      updateReservationPreview();
+    });
+  }
+
+  // Live preview updates on typing
+  ['resTitleInput', 'resSubtitleInput', 'resNoticeInput'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.addEventListener('input', updateReservationPreview);
+    }
+  });
+
+  const saveBtn = document.getElementById('btnSaveReservation');
+  if (saveBtn) {
+    saveBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (!siteData.reservation) siteData.reservation = {};
+
+      siteData.reservation.enabled = document.getElementById('reservationEnabledCheck')?.checked ?? true;
+      siteData.reservation.title = document.getElementById('resTitleInput')?.value.trim() || 'Reservasi Meja / Pesan Katering';
+      siteData.reservation.subtitle = document.getElementById('resSubtitleInput')?.value.trim() || '';
+      siteData.reservation.waTarget = document.getElementById('resWaInput')?.value.trim().replace(/\D/g, '') || '6285158515332';
+      siteData.reservation.buttonText = document.getElementById('resButtonTextInput')?.value.trim() || 'Kirimkan Permohonan Sekarang 🌿';
+      siteData.reservation.notice = document.getElementById('resNoticeInput')?.value.trim() || '';
+
+      saveAdminData('Pengaturan Kolom Reservasi berhasil disimpan!');
+    });
+  }
+}
+
+// ==========================================
 // 10. TAB 7: AKUN & CADANGAN (BACKUP/RESTORE)
 // ==========================================
 function initAccountEvents() {
@@ -1089,6 +1869,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLocationEvents();
   initContactEvents();
   initPromoEvents();
+  initReservationEvents();
   initAccountEvents();
   checkAuth();
 });

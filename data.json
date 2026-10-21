@@ -93,6 +93,39 @@
       "image": "images/menu/soto-kudus-pisah.jpg"
     },
     {
+      "id": "soto-kudus-daging-campur",
+      "name": "Soto Kudus Daging Sapi Campur",
+      "category": "soto",
+      "price": 24000,
+      "isAvailable": true,
+      "tag": "Daging Sapi Pilihan 🥩",
+      "tagClass": "tag-star",
+      "desc": "Cita rasa otentik Kudus dengan potongan daging sapi empuk gurih meresap, tauge renyah, kuah kaldu rempah harum, disajikan hangat langsung bersama nasi.",
+      "image": "images/menu/soto-kudus-daging-campur.jpg"
+    },
+    {
+      "id": "soto-kudus-daging-pisah",
+      "name": "Soto Kudus Daging Sapi Pisah",
+      "category": "soto",
+      "price": 28000,
+      "isAvailable": true,
+      "tag": "Favorit Gurih 🥩",
+      "tagClass": "tag-favorit",
+      "desc": "Semangkuk penuh kuah kaldu sapi kaya rempah dengan irisan daging sapi empuk lembut melimpah, disajikan terpisah dari nasi putih hangat.",
+      "image": "images/menu/soto-kudus-daging-pisah.jpg"
+    },
+    {
+      "id": "soto-kudus-spesial-komplit",
+      "name": "Soto Kudus Spesial Komplit Kedai Taman",
+      "category": "soto",
+      "price": 30000,
+      "isAvailable": true,
+      "tag": "Porsi Istimewa ⭐",
+      "tagClass": "tag-star",
+      "desc": "Porsi komplit istimewa: suwiran ayam kampung melimpah, telur bacem utuh, perkedel kentang lembut, dan taburan bawang putih goreng ekstra garing di kuah kaldu emas.",
+      "image": "images/menu/soto-kudus-spesial-komplit.jpg"
+    },
+    {
       "id": "sate-telur-puyuh",
       "name": "Sate Telur Puyuh Kecap Bacem",
       "category": "lauk",
@@ -126,6 +159,17 @@
       "image": "images/menu/sate-usus.jpg"
     },
     {
+      "id": "sate-kerang",
+      "name": "Sate Kerang Bumbu Manis Gurih",
+      "category": "lauk",
+      "price": 5000,
+      "isAvailable": true,
+      "tag": "Khas Pesisir 🦪",
+      "tagClass": "tag-favorit",
+      "desc": "Kerang dara segar dimasak bumbu kecap rempah manis gurih khas pesisir Jawa Timur, bertekstur kenyal legit dan harum.",
+      "image": "images/menu/sate-kerang.jpg"
+    },
+    {
       "id": "perkedel-kentang",
       "name": "Perkedel Kentang Spesial",
       "category": "lauk",
@@ -146,6 +190,50 @@
       "tagClass": "tag-favorit",
       "desc": "Tempe dan tahu kedelai yang direbus perlahan dengan gula merah dan ketumbar wangi meresap.",
       "image": "images/menu/tempe-tahu-bacem.jpg"
+    },
+    {
+      "id": "tempe-mendoan",
+      "name": "Tempe Mendoan Panas (Isi 3)",
+      "category": "lauk",
+      "price": 12000,
+      "isAvailable": true,
+      "tag": "Gorengan Hangat 🥢",
+      "tagClass": "tag-favorit",
+      "desc": "Tempe lebar berbalut adonan tepung daun bawang kucai yang digoreng hangat lembut gurih, disajikan lengkap dengan sambal kecap rawit pedas.",
+      "image": "images/menu/tempe-mendoan.jpg"
+    },
+    {
+      "id": "peyek-kacang",
+      "name": "Peyek Kacang Daun Jeruk Renyah",
+      "category": "lauk",
+      "price": 5000,
+      "isAvailable": true,
+      "tag": "Kriuk Gurih 🥜",
+      "tagClass": "tag-favorit",
+      "desc": "Rempeyek kacang tanah bertabur irisan daun jeruk purut wangi, super renyah dan gurih sebagai pelengkap santapan berkuah.",
+      "image": "images/menu/peyek-kacang.jpg"
+    },
+    {
+      "id": "kerupuk-kaleng",
+      "name": "Kerupuk Putih Kaleng Biru",
+      "category": "lauk",
+      "price": 2000,
+      "isAvailable": true,
+      "tag": "Klasik Kedai 🌾",
+      "tagClass": "tag-favorit",
+      "desc": "Kerupuk uyel putih bundar klasik khas warung soto, renyah gurih menggoda saat dicelup ke kuah soto hangat.",
+      "image": "images/menu/kerupuk-kaleng.jpg"
+    },
+    {
+      "id": "nasi-putih",
+      "name": "Nasi Putih Hangat Pulen",
+      "category": "lauk",
+      "price": 5000,
+      "isAvailable": true,
+      "tag": "Pulen Wangi 🍚",
+      "tagClass": "tag-favorit",
+      "desc": "Sepiring nasi putih beras pilihan yang pulen dan hangat, ditaburi bawang merah goreng harum.",
+      "image": "images/menu/nasi-putih.jpg"
     },
     {
       "id": "nasi-sambal-ibu",
@@ -203,6 +291,28 @@
       "image": "images/menu/ayam-kremes.jpg"
     },
     {
+      "id": "rawon-surabaya",
+      "name": "Rawon Daging Sapi Khas Surabaya",
+      "category": "nusantara",
+      "price": 28000,
+      "isAvailable": true,
+      "tag": "Khas Jatim 🍲",
+      "tagClass": "tag-nusantara",
+      "desc": "Kuah rawon hitam pekat kaya rempah kluwek pilihan, potongan daging sapi empuk, tauge pendek renyah, dan sambal terasi gurih.",
+      "image": "images/menu/rawon-surabaya.jpg"
+    },
+    {
+      "id": "nasi-goreng-jawa",
+      "name": "Nasi Goreng Jawa Tradisional",
+      "category": "nusantara",
+      "price": 23000,
+      "isAvailable": true,
+      "tag": "Resep Klasik 🍳",
+      "tagClass": "tag-nusantara",
+      "desc": "Nasi goreng racikan bumbu khas Jawa beraroma smokey gurih, dilengkapi telur orak-arik, suwiran ayam kampung, kerupuk, dan acar segar.",
+      "image": "images/menu/nasi-goreng-jawa.jpg"
+    },
+    {
       "id": "es-teh-manis",
       "name": "Es Teh Manis Melati",
       "category": "minuman",
@@ -258,6 +368,39 @@
       "image": "images/menu/kopi-susu-kedai-taman.jpg"
     },
     {
+      "id": "es-sinom",
+      "name": "Es Sinom Khas Surabaya Segar",
+      "category": "minuman",
+      "price": 8000,
+      "isAvailable": true,
+      "tag": "Segar Alami 🍃",
+      "tagClass": "tag-drink",
+      "desc": "Minuman herbal segar daun asam muda (sinom) dan kunyit asam asli Jawa Timur dengan gula aren alami, sangat sejuk di tenggorokan.",
+      "image": "images/menu/es-sinom.jpg"
+    },
+    {
+      "id": "es-degan-jeruk",
+      "name": "Es Degan Kelapa Muda Jeruk",
+      "category": "minuman",
+      "price": 12000,
+      "isAvailable": true,
+      "tag": "Favorit Siang 🥥",
+      "tagClass": "tag-drink",
+      "desc": "Air kelapa muda murni segar dengan serutan daging kelapa lembut dipadu kesegaran perasan jeruk nipis alami.",
+      "image": "images/menu/es-degan-jeruk.jpg"
+    },
+    {
+      "id": "wedang-jahe-sereh",
+      "name": "Wedang Jahe Sereh Hangat Gula Batu",
+      "category": "minuman",
+      "price": 9000,
+      "isAvailable": true,
+      "tag": "Penghangat Tubuh 🫖",
+      "tagClass": "tag-drink",
+      "desc": "Geprekan jahe merah bakar dan batang sereh wangi diseduh air panas dengan pemanis gula batu alami.",
+      "image": "images/menu/wedang-jahe-sereh.jpg"
+    },
+    {
       "id": "tumpeng-nasi-kotak",
       "name": "Paket Nasi Kotak & Tumpeng Acara",
       "category": "katering",
@@ -265,8 +408,30 @@
       "isAvailable": true,
       "tag": "Catering & Event 🍱",
       "tagClass": "tag-star",
-      "desc": "Menerima pesanan nasi kotak syukuran, tumpeng mini/besar untuk acara kantor, arisan, pengajian dan ulang tahun.",
+      "desc": "Menerima pesanan nasi kotak syukuran, tumpeng mini maupun tumpeng besar untuk acara kantor, arisan, pengajian dan syukuran keluarga.",
       "image": "images/menu/tumpeng-nasi-kotak.jpg"
+    },
+    {
+      "id": "paket-sarapan-box",
+      "name": "Paket Sarapan Box Soto Kudus (Min. 5 Box)",
+      "category": "katering",
+      "price": 22000,
+      "isAvailable": true,
+      "tag": "Sarapan Kantor 🍱",
+      "tagClass": "tag-favorit",
+      "desc": "Box sarapan praktis berisi mangkuk ramah lingkungan Soto Kudus Ayam, nasi putih terpisah, sate telur puyuh, perkedel kentang, dan kerupuk.",
+      "image": "images/menu/paket-sarapan-box.jpg"
+    },
+    {
+      "id": "paket-prasmanan",
+      "name": "Paket Prasmanan Soto Kudus (Min. 30 Pax)",
+      "category": "katering",
+      "price": 45000,
+      "isAvailable": true,
+      "tag": "Jamuan Lengkap 🍽️",
+      "tagClass": "tag-star",
+      "desc": "Layanan prasmanan live-cooking lengkap dengan stall Soto Kudus panas, aneka sate bacem komplit, lauk nusantara, es teh/es jeruk, dan waiter profesional.",
+      "image": "images/menu/paket-prasmanan.jpg"
     }
   ],
   "gallery": [
@@ -310,22 +475,84 @@
       "id": "galeri-5",
       "title": "Penyajian Hangat & Higienis",
       "category": "Suasana",
-      "badge": "Otentik",
+      "badge": "Higienis & Otentik",
       "tag": "#resepwarisan #kudus",
       "desc": "Setiap hidangan disajikan dengan standar kebersihan tinggi dan bumbu rempah racikan khas nusantara.",
       "image": "images/galeri/galeri-5-penyajian-khas.jpg"
     },
     {
       "id": "galeri-6",
-      "title": "Minuman Tradisional & Kopi",
+      "title": "Minuman Tradisional & Kopi Susu",
       "category": "Minuman",
       "badge": "Segar & Berkhasiat",
       "tag": "#wedanguwuh #kopisusu",
       "desc": "Pilihan wedang uwuh hangat, jamu beras kencur, es jeruk peras alami, hingga es kopi susu gula aren.",
       "image": "images/galeri/galeri-6-minuman-tradisional.jpg"
+    },
+    {
+      "id": "galeri-7",
+      "title": "Soto Kudus Daging Sapi Kuah Rempah",
+      "category": "Makanan",
+      "badge": "Menu Istimewa",
+      "tag": "#sotodagingsapi #rempah",
+      "desc": "Potongan daging sapi empuk dengan kuah kaldu rempah harum yang disajikan terpisah bersama nasi hangat.",
+      "image": "images/galeri/galeri-7-soto-daging-rempah.jpg"
+    },
+    {
+      "id": "galeri-8",
+      "title": "Tempe Mendoan Panas & Sambal Kecap",
+      "category": "Lauk",
+      "badge": "Gorengan Panas",
+      "tag": "#mendoan #kucai",
+      "desc": "Tempe mendoan lembut berbalut tepung daun bawang wangi disajikan segar mendidih dari wajan bersama kecap rawit pedas.",
+      "image": "images/galeri/galeri-8-mendoan-panas.jpg"
+    },
+    {
+      "id": "galeri-9",
+      "title": "Iga Sapi Penyet Cobek Sambal Bawang",
+      "category": "Makanan",
+      "badge": "Menu Sultan",
+      "tag": "#igapenyet #pedasnampol",
+      "desc": "Iga sapi bakar penyet empuk gurih dengan limpahan sambal bawang segar yang menggugah selera santap siang.",
+      "image": "images/galeri/galeri-9-iga-penyet-sambal.jpg"
+    },
+    {
+      "id": "galeri-10",
+      "title": "Wedang Rempah Uwuh & Jamu Herbal",
+      "category": "Minuman",
+      "badge": "Hangat Sehat",
+      "tag": "#wedanguwuh #jamuherbal",
+      "desc": "Racikan dedaunan dan rempah kayu secang, jahe bakar geprek, cengkeh wangi dengan manis batu murni.",
+      "image": "images/galeri/galeri-10-wedang-rempah.jpg"
+    },
+    {
+      "id": "galeri-11",
+      "title": "Paket Tumpeng & Nasi Kotak Syukuran",
+      "category": "Katering",
+      "badge": "Pesanan Acara",
+      "tag": "#tumpengsurabaya #nasikotak",
+      "desc": "Penyajian tumpeng kuning komplit dan nasi kotak higienis untuk berbagai acara keluarga, syukuran kantor, dan arisan.",
+      "image": "images/galeri/galeri-11-tumpeng-syukuran.jpg"
+    },
+    {
+      "id": "galeri-12",
+      "title": "Area Santap Keluarga Semi-Outdoor Rindang",
+      "category": "Suasana",
+      "badge": "Ramah Keluarga",
+      "tag": "#tamanrindang #gayungan",
+      "desc": "Suasana santap nyaman semi-outdoor di bawah keteduhan pepohonan hijau, fasilitas musholla dan parkir luas.",
+      "image": "images/galeri/galeri-12-area-santap-taman.jpg"
     }
   ],
   "settings": {
     "adminPassword": "sodus123"
+  },
+  "reservation": {
+    "enabled": true,
+    "title": "Reservasi Meja / Pesan Katering",
+    "subtitle": "Silakan kirimkan permohonan reservasi tempat atau pertanyaan seputar katering acara Anda:",
+    "waTarget": "6285158515332",
+    "buttonText": "Kirimkan Permohonan Sekarang 🌿",
+    "notice": "Untuk reservasi rombongan atau paket syukuran keluarga di atas 10 orang disarankan konfirmasi H-1."
   }
 }

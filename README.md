@@ -1,6 +1,13 @@
 # Website Resmi & Portal Admin Soto Kudus Kedai Taman (SODUS) Surabaya
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmufidfazzal-sys%2Fsotokudus-kedaitaman-website)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Website-success?style=for-the-badge&logo=github)](https://mufidfazzal-sys.github.io/sotokudus-kedaitaman-website/)
+
 Website resmi, katalog digital, dan portal pengelola konten (Admin Dashboard) untuk warung kuliner **SODUS "Soto Kudus" Kedai Taman**, berlokasi di Jl. Gayungsari Timur No. 7, Surabaya.
+
+* **Live Demo (GitHub Pages):** [https://mufidfazzal-sys.github.io/sotokudus-kedaitaman-website/](https://mufidfazzal-sys.github.io/sotokudus-kedaitaman-website/)
+* **Repositori GitHub:** [https://github.com/mufidfazzal-sys/sotokudus-kedaitaman-website](https://github.com/mufidfazzal-sys/sotokudus-kedaitaman-website)
+* **1-Click Deploy ke Vercel:** [Klik di sini untuk langsung deploy ke Vercel](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmufidfazzal-sys%2Fsotokudus-kedaitaman-website)
 
 ---
 
